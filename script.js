@@ -89,14 +89,34 @@ let solved = JSON.parse(localStorage.getItem("solvedPuzzles")) || {};
 let currentPuzzle = 0;
 
 // Initialize solved list for current group if missing
-if (!solved[currentGroup]) {
-  solved[currentGroup] = Array(puzzles.length).fill(false);
+for (let i = 0; i < Object.keys(allPuzzles).length; i++) {
+  if (!solved[Object.keys(allPuzzles)[i]]) {
+    solved[Object.keys(allPuzzles)[i]] = Array(puzzles.length).fill(false);
+  }
 }
 
 // Find first unsolved puzzle
-const solvedList = solved[currentGroup];
+const solvedList = solved[currentGroup] || [];
 const firstUnsolvedIndex = solvedList.findIndex(s => !s);
-currentPuzzle = firstUnsolvedIndex === -1 ? 0 : firstUnsolvedIndex;
+
+// If current group is fully solved, try to go to next unlocked group
+if (firstUnsolvedIndex === -1) {
+  const groupKeys = Object.keys(allPuzzles);
+  const currentIndex = groupKeys.indexOf(currentGroup);
+
+  for (let i = currentIndex + 1; i < groupKeys.length; i++) {
+    const nextGroup = groupKeys[i];
+    const nextSolvedList = solved[nextGroup] || [];
+    const nextUnsolvedIndex = nextSolvedList.findIndex(s => !s);
+    if (nextUnsolvedIndex !== -1) {
+      currentGroup = nextGroup;
+      currentPuzzle = nextUnsolvedIndex;
+      break;
+    }
+  }
+} else {
+  currentPuzzle = firstUnsolvedIndex;
+}
 
 function startGame() {
   puzzles = allPuzzles[currentGroup];
