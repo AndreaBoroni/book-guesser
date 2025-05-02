@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>BookGuesser</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1 class="main-title">🕵🏻 Guess the Book Title! 📕</h1>
-
+  <div id="overallProgressText"></div>
+  
   <div id="container">
     <div id="sidebar">
       <div class="info-hover">
         ℹ️ Rules
         <div class="info-box">
           <ul>
-            <li><strong>'( )'</strong> means the emojis form one word or part of a word</li>
+            <li><strong>'( )'</strong> means the emojis form one word or part of a word (e.g. (🤏🐎) -> Little + Horse = Pony</li>
             <li><strong>'s'</strong> means plural (e.g., 🐶s = dogs)</li>
-            <li>Emojis represent only the <strong>title</strong> and not the plot</li>
+            <li>Emojis represent only the <strong>title</strong> and not the plot/author/characters</li>
+            <li>You may not know all the books, a little help from Google is allowed 😉</li>
           </ul>
         </div>
       </div>
-        <h2>Categories</h2>
-    <div class="category-buttons" id="categoryButtons"></div>
+        <div id="groupSelector"></div>
     </div>
           
     <div id="gameWrapper">
       
         <div id="gameArea">
-          <h1 id="gameTitle">Guess the Book Title!</h1>
         <div id="game">
             <button id="prevBtn" onclick="prevPuzzle()" aria-label="Previous">
                 <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -50,13 +51,19 @@
         <div id="progressContainer">
             <div id="progressBar"></div>
         </div>
+        <div id="unlockMessage" style="text-align:center; font-size: 0.95em; margin-top: 10px; color: #aaa;"></div>
+
         
         </div>
     </div>
   </div>
-
+<!-- 
   <button id="unlockAllBtn" onclick="unlockAll()" style="margin: 20px; padding: 10px;">
     🔓 Unlock All Levels
+  </button> -->
+  <button onclick="resetProgress()" style="margin: 10px;">🗑️ Reset Progress</button>
+  <button id="revealAnswerBtn" onclick="revealAnswer()" style="margin-top: 10px;">
+    🕵️ Reveal Answer
   </button>
   <script src="script.js"></script>
 </body>

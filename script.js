@@ -1,9 +1,7 @@
 /*
 Book ideas:
 twilight
-The Lord of the Rings
 To kill a mockingbird
-snow crash
 the wheel of time
 The Three Musketeers
 the return of the king
@@ -15,190 +13,107 @@ the invisible man
 */
 
 
+// { emoji: "2️⃣♜", answer: "the two towers" },
+// { emoji: "(♫♪♫)🧊➕🔥", answer: "a song of ice and fire" },
+
+const UNLOCK_THRESHOLD = 0.6;
+
 const allPuzzles = {
-    "sci-fi-fantasy": {
-        easy: [
-          { emoji: "⚙️🍊", answer: "a clockwork orange" },
-          { emoji: "1️⃣9️⃣8️⃣4️⃣", answer: "1984" },
-          { emoji: "🐱(👶🛌🏻)", answer: "cat's cradle" },
-          { emoji: "(🙅🍽️)(🎮🎲)", answer: "the hunger games" },
-          { emoji: "🤴🏻💍s", answer: "the lord of the rings" },
-          { emoji: "2️⃣♜", answer: "the two towers" },
-          { emoji: "🦁➕🧙🏻‍♀️➕(👕👗👔🗄️)", answer: "the lion the witch and the wardrobe" },
-        ],
-        medium: [
-          { emoji: "🙋‍♂️🤖", answer: "i robot" },
-          { emoji: "(🐄🔪🥩)🏠5️⃣", answer: "slaughterhouse 5" },
-          { emoji: "(✒️⚫💧)❤️", answer: "inkheart" },
-          { emoji: "🥇🧭", answer: "the golden compass" },
-          { emoji: "🥈🪑", answer: "the silver chair" },
-          { emoji: "👼s➕😈s", answer: "angels and demons" },
-        ],
-        hard: [
-          { emoji: "🤖s (🛌💭)⚡🐏❓", answer: "do androids dream of electric sheep?" },
-          { emoji: "🩸🎵", answer: "bloodmusic" },
-          { emoji: "🚶2️⃣☾", answer: "walk two moons" },
-          { emoji: "⏳(🧑🏻🧳)👰🏻", answer: "the time traveler's wife" },
-          { emoji: "🤏🏠(❌🤏)(🌲🌳)", answer: "little house in the big woods" },
-          { emoji: "(♫♪♫)🧊➕🔥", answer: "a song of ice and fire" },
-          { emoji: "(💎💰🎁)(🌊🏝️🌊)", answer: "treasure island" },
-        ]
-    },
-    "classics": {
-        easy: [
-          { emoji: "(🍈®️)🔀", answer: "oliver twist" },
-          { emoji: "👴➕🌊", answer: "the old man and the sea" },
-          { emoji: "⚔️➕☮︎", answer: "war and peace" },
-          { emoji: "🍫⚔️", answer: "the chocolate war" },
-          { emoji: "🏰", answer: "the castle" },
-          { emoji: "🐁s(🧔🏻‍♂️)s", answer: "of mice and men" },
-          { emoji: "🤴🏻🦟s", answer: "lord of the flies" },
-        ],
-        medium: [
-          { emoji: "🍇🤬", answer: "the grapes of wrath" },
-          { emoji: "🤏🤴🏻", answer: "the little prince" },
-          { emoji: "🪁🏃", answer: "the kite runner" },
-          { emoji: "(🐷🐮🐔)(🚜🌾👨‍🌾🏡)", answer: "animal farm" },
-          { emoji: "🤏(👩🏻♀️)s", answer: "little women" },
-        ],
-        hard: [
-          { emoji: "🎣2️⃣2️⃣", answer: "catch-22" },
-          { emoji: "🛣️", answer: "the road" },
-          { emoji: "🏏⏳⬛", answer: "the cricket in times square" },
-          { emoji: "⛲🙂", answer: "the fountainhead" },
-          { emoji: "🌍🤷‍♀️", answer: "atlas shrugged" },
-          { emoji: "🟥✉️", answer: "the scarlet letter" },
-          { emoji: "🌃(📚🏠)", answer: "the midnight library" },
-        ]
-    },
-    "thriller": {
-        easy: [
-            { emoji: "🤐🤕", answer: "the silent patient" },
-            { emoji: "👧🏻🦪(👂🏻💍)", answer: "girl with a pearl earring" },
-            { emoji: "", answer: "50 shades of gray" },
-        ],
-        medium: [
-            { emoji: "👧🏻🚅", answer: "the girl on the train" },
-            { emoji: "✨", answer: "the shining" },
-        ],
-        hard: [
-            { emoji: "📜🏙️s", answer: "paper towns" },
-            { emoji: "💦🐘s", answer: "water for elephants" },
-        ]
-    }
+  "i": [
+    { emoji: "🤴🏻💍s", answer: "the lord of the rings" },
+    { emoji: "1️⃣9️⃣8️⃣4️⃣", answer: "1984" },
+    { emoji: "👼s➕😈s", answer: "angels and demons" },
+    { emoji: "🤏🤴🏻", answer: "the little prince" },
+    { emoji: "👴➕🌊", answer: "the old man and the sea" },
+    { emoji: "(🐷🐮🐔)(🚜🌾👨‍🌾🏡)", answer: "animal farm" },
+  ],
+  "ii": [
+    { emoji: "(🙅🍽️)(🎮🎲)", answer: "the hunger games" },
+    { emoji: "🙋‍♂️🤖", answer: ["i robot", "i, robot"]},
+    { emoji: "⚙️🍊", answer: "a clockwork orange" },
+    { emoji: "5️⃣0️⃣🌫️(⚪↔️⚫)", answer: "50 shades of gray" },
+    { emoji: "🏰", answer: "the castle" },
+    { emoji: "⚔️➕☮︎", answer: "war and peace" },
+  ],
+  "iii": [
+    { emoji: "🎣2️⃣2️⃣", answer: ["catch-22", "catch 22"] },
+    { emoji: "(🐄🔪🥩)🏠5️⃣", answer: ["slaughterhouse 5", "slaughter-house 5", "slaughterhouse-5"]},
+    { emoji: "🥇🧭", answer: "the golden compass" },
+    { emoji: "(💎💰🎁)(🌊🏝️🌊)", answer: "treasure island" },
+    { emoji: "🐁s(🧔🏻‍♂️)s", answer: "of mice and men" },
+    { emoji: "🤴🏻🦟s", answer: "lord of the flies" },
+  ],
+  "iv": [
+    { emoji: "🍇🤬", answer: "the grapes of wrath" },
+    { emoji: "(🍈®️)🔀", answer: "oliver twist" },
+    { emoji: "🪁🏃", answer: "the kite runner" },
+    { emoji: "🤏(👩🏻♀️)s", answer: "little women" },
+    { emoji: "(✒️⚫💧)❤️", answer: "inkheart" },
+    { emoji: "🦁➕🧙🏻‍♀️➕(👕👗👔🗄️)", answer: "the lion the witch and the wardrobe" },
+  ],
+  "v": [
+    { emoji: "🛣️", answer: "the road" },
+    { emoji: "🤖s (🛌💭)⚡🐏❓", answer: "do androids dream of electric sheep?" },
+    { emoji: "(💻👨🏻‍💻🌐)", answer: "it" },
+    { emoji: "🐱(👶🛌🏻)", answer: "cat's cradle" },
+    { emoji: "⛲🙂", answer: "the fountainhead" },
+    { emoji: "🌃(📚🏠)", answer: "the midnight library" },
+  ],
+  "vi": [
+    { emoji: "🩸🎵", answer: "bloodmusic" },
+    { emoji: "🤐🤕", answer: "the silent patient" },
+    { emoji: "👧🏻🦪(👂🏻💍)", answer: "girl with a pearl earring" },
+    { emoji: "👧🏻🔛🚅", answer: "the girl on the train" },
+    { emoji: "✨", answer: "the shining" },
+    { emoji: "📜🏙️s", answer: "paper towns" },
+  ],
+  "vii": [
+    { emoji: "⏳(🧑🏻🧳)👰🏻", answer: "the time traveler's wife" },
+    { emoji: "🌍🤷‍♀️", answer: "atlas shrugged" },
+    { emoji: "🚶2️⃣🌙s", answer: "walk two moons" },
+    { emoji: "🤏🏠(❌🤏)(🌲🌳)", answer: "little house in the big woods" },
+    { emoji: "🍫⚔️", answer: "the chocolate war" },
+    { emoji: "🥈🪑", answer: "the silver chair" },
+  ],
+  "viii": [
+    { emoji: "💦🐘s", answer: "water for elephants" },
+    { emoji: "🟥✉️", answer: "the scarlet letter" },
+    { emoji: "🏏⏳⬛", answer: "the cricket in times square" },
+    { emoji: "❄️(🚗💥🚗)", answer: "snow crash" },
+  ]
 };
 
-
-let selectedCategory = "sci-fi-fantasy"; // default pre-selected
-let selectedDifficulty = "easy"; // default pre-selected
-let puzzles = [];
+let currentGroup = "i"; // default group
+let puzzles = allPuzzles[currentGroup];
+let solved = JSON.parse(localStorage.getItem("solvedPuzzles")) || {};
 let currentPuzzle = 0;
-let solved = {};
 
-function getCategoryLabel(categoryKey) {
-    const labels = {
-        "sci-fi-fantasy": "🚀 Sci-Fi & Fantasy 🧙",
-        "classics": "📚 Classics",
-        "thriller": "🕵 Thriller"
-    };
-    return labels[categoryKey] || categoryKey;
+// Initialize solved list for current group if missing
+if (!solved[currentGroup]) {
+  solved[currentGroup] = Array(puzzles.length).fill(false);
 }
 
-function generateCategoryButtons() {
-    const container = document.getElementById('categoryButtons');
-    container.innerHTML = ''; // clear existing content
-  
-    Object.keys(allPuzzles).forEach(categoryKey => {
-      const categoryDiv = document.createElement('div');
-      categoryDiv.classList.add('category');
-      categoryDiv.dataset.category = categoryKey;
-      categoryDiv.onclick = () => handleCategoryClick(categoryKey);
-  
-      const labelMap = {
-          "sci-fi": "🚀 Sci-Fi",
-          "fantasy": "🧙 Fantasy",
-          "classics": "📚 Classics",
-      };
-      categoryDiv.textContent = getCategoryLabel(categoryKey);
-      
-      const difficultyContainer = document.createElement('div');
-      difficultyContainer.classList.add('difficulty-buttons', 'hidden');
-      
-      const difficulties = Object.keys(allPuzzles[categoryKey]);
-      difficulties.forEach(difficulty => {
-        const btn = document.createElement('button');
-        btn.dataset.difficulty = difficulty;
-        btn.textContent = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
-        btn.onclick = (e) => {
-            e.stopPropagation(); // prevent parent category click
-            selectDifficulty(difficulty);
-        };
-        difficultyContainer.appendChild(btn);
-    });
-    
-      categoryDiv.appendChild(difficultyContainer);
-      container.appendChild(categoryDiv);
-    });
-  }
-  
-
-function handleCategoryClick(categoryName) {
-    const categories = document.querySelectorAll('.category');
-  
-    categories.forEach(c => {
-      c.classList.remove('active');
-      c.querySelector('.difficulty-buttons').classList.add('hidden');
-    });
-  
-    const selectedElement = document.querySelector(`.category[data-category="${categoryName}"]`);
-  
-    if (selectedElement) {
-      selectedElement.classList.add('active');
-      selectedElement.querySelector('.difficulty-buttons').classList.remove('hidden');
-      selectedCategory = categoryName;
-    }
-  }
-
-  function selectDifficulty(difficulty) {
-    selectedDifficulty = difficulty;
-    const readableCategory = getCategoryLabel(selectedCategory);
-    const readableDifficulty = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
-
-    document.getElementById("gameTitle").textContent = `${readableCategory}: ${readableDifficulty}`;
-
-    // Remove "active" from all difficulty buttons
-    const allDifficultyButtons = document.querySelectorAll('.difficulty-buttons button');
-    allDifficultyButtons.forEach(btn => btn.classList.remove('active'));
-
-    // Find the active category
-    const activeCategory = document.querySelector('.category.active');
-    if (activeCategory) {
-        const activeButton = activeCategory.querySelector(`.difficulty-buttons button[data-difficulty="${difficulty}"]`);
-        if (activeButton) {
-            activeButton.classList.add('active');
-        }
-    }
-    setTimeout(() => {
-      const input = document.getElementById('userInput');
-      if (input && !input.disabled) input.focus();
-    }, 100);
-    
-
-    startGame();
-}
+// Find first unsolved puzzle
+const solvedList = solved[currentGroup];
+const firstUnsolvedIndex = solvedList.findIndex(s => !s);
+currentPuzzle = firstUnsolvedIndex === -1 ? 0 : firstUnsolvedIndex;
 
 function startGame() {
-    puzzles = allPuzzles[selectedCategory][selectedDifficulty];
-    currentPuzzle = 0;
-  
-    const key = `${selectedCategory}_${selectedDifficulty}`;
-    if (!solved[key]) {
-      solved[key] = Array(puzzles.length).fill(false);
-    }
-  
-    loadPuzzle(false);
-    updateProgress();
+  puzzles = allPuzzles[currentGroup];
+
+  if (!solved[currentGroup]) {
+    solved[currentGroup] = Array(puzzles.length).fill(false);
   }
+
+  const solvedList = solved[currentGroup];
+  const firstUnsolvedIndex = solvedList.findIndex(s => !s);
+  currentPuzzle = firstUnsolvedIndex === -1 ? 0 : firstUnsolvedIndex;
+
+  loadPuzzle(false);
+  updateProgress();
+}
+
+
   
   function levenshteinDistance(a, b) {
     const matrix = [];
@@ -219,56 +134,81 @@ function startGame() {
   function loadPuzzle(animated = false) {
     const area = document.getElementById('puzzleArea');
   
+    // Always remove 'solved' class before rendering a new puzzle
+    area.classList.remove('solved');
+  
+    const key = currentGroup;
+  
+    const isSolved = solved[key] && solved[key][currentPuzzle];
+  
     if (animated) {
       area.classList.add('hide');
       setTimeout(() => {
         updatePuzzleHTML();
         area.classList.remove('hide');
+  
+        if (isSolved) {
+          area.classList.add('solved');
+        }
       }, 100);
     } else {
       updatePuzzleHTML();
-    }
   
+      if (isSolved) {
+        area.classList.add('solved');
+      }
+    }
+    
     updateButtons();
-  }
+  }  
   
   function updatePuzzleHTML() {
     const puzzle = puzzles[currentPuzzle];
     const area = document.getElementById('puzzleArea');
-  
-    const key = `${selectedCategory}_${selectedDifficulty}`;
+    const key = currentGroup;
     const isSolved = solved[key] && solved[key][currentPuzzle];
   
-    // Reset the state
-    area.classList.remove('solved');
+    let content = `<div class="emoji">${puzzle.emoji}</div>`;
   
-    // Add solved class if this puzzle is already solved
     if (isSolved) {
-      area.classList.add('solved');
+      let answerText = Array.isArray(puzzle.answer) ? puzzle.answer[0] : puzzle.answer;
+      content += `<div class="solved-answer">${answerText}</div>`;
+    } else {
+      content += `<input type="text" id="userInput" placeholder="Your guess" oninput="checkAnswer()">`;
     }
   
-    area.innerHTML = `
-      <div class="emoji">${puzzle.emoji}</div>
-      <input type="text" id="userInput" placeholder="Your guess" oninput="checkAnswer()" ${isSolved ? "disabled" : ""}>
-    `;
+    area.innerHTML = content;
   }
+  
 
   
   function checkAnswer() {
     const inputEl = document.getElementById('userInput');
     const puzzleBox = document.getElementById('puzzleArea');
     const userInput = inputEl.value.toLowerCase().trim().replace(/\s+/g, " ");
-    const correctAnswer = puzzles[currentPuzzle].answer.toLowerCase().trim();
-  
-    if (levenshteinDistance(userInput, correctAnswer) === 0) {
+    
+    let answers = puzzles[currentPuzzle].answer;
+    if (typeof answers === "string") answers = [answers];
+
+    let isCorrect = false;
+    for (let i = 0; i < answers.length; i++) {
+      const correct = answers[i].toLowerCase().trim().replace(/\s+/g, " ");
+      if (levenshteinDistance(userInput, correct) === 0) {
+        isCorrect = true;
+      }
+    }
+
+    if (isCorrect) {
       inputEl.disabled = true;
   
-      const key = `${selectedCategory}_${selectedDifficulty}`;
+      const key = currentGroup;
       if (!solved[key][currentPuzzle]) {
         solved[key][currentPuzzle] = true;
+        localStorage.setItem("solvedPuzzles", JSON.stringify(solved));
         updateProgress();
-        checkSectionCompletion();
+        renderGroupButtons(); // check if new group should unlock
       }
+
   
       puzzleBox.classList.add('solved');
   
@@ -303,100 +243,175 @@ function startGame() {
   }
   
   function updateProgress() {
-    const key = `${selectedCategory}_${selectedDifficulty}`;
+    const key = currentGroup;
     const total = puzzles.length;
     const solvedCount = solved[key] ? solved[key].filter(x => x).length : 0;
     const percentage = (solvedCount / total) * 100;
     document.getElementById('progressBar').style.width = percentage + '%';
+
+    const groupNames = Object.keys(allPuzzles);
+    const currentIndex = groupNames.indexOf(currentGroup);
+    const nextGroup = groupNames[currentIndex + 1];
+    const unlockMessage = document.getElementById('unlockMessage');
+
+    if (nextGroup) {
+      const currentKey = currentGroup;
+      const currentSolvedList = solved[currentKey] || [];
+      const currentTotal = allPuzzles[currentGroup].length;
+      const currentSolvedCount = currentSolvedList.filter(x => x).length;
+      const progressRatio = currentSolvedCount / currentTotal;
+
+      if (progressRatio < UNLOCK_THRESHOLD) {
+        const needed = Math.ceil(UNLOCK_THRESHOLD * currentTotal) - currentSolvedCount;
+        unlockMessage.textContent = `Solve ${needed} more to unlock Group ${nextGroup.toUpperCase()}`;
+      } else {
+        unlockMessage.textContent = `✅ Group ${nextGroup.toUpperCase()} unlocked!`;
+      }
+    } else {
+      unlockMessage.textContent = "";
+    }
+
   }
+  
   
   function updateButtons() {
     document.getElementById('prevBtn').disabled = (currentPuzzle === 0);
     document.getElementById('nextBtn').disabled = (currentPuzzle === puzzles.length - 1);
   }
-  
-  function checkSectionCompletion() {
-    const categories = document.querySelectorAll('.category');
-  
-    categories.forEach(category => {
-      const categoryName = category.getAttribute('data-category');
-      const difficultyButtons = category.querySelectorAll('.difficulty-buttons button');
-  
-      let unlocked = true;
-  
-      difficultyButtons.forEach(btn => {
-        const difficulty = btn.getAttribute('data-difficulty');
-        const key = `${categoryName}_${difficulty}`;
-        const puzzlesForDifficulty = allPuzzles[categoryName][difficulty];
-        if (!puzzlesForDifficulty) return;
-  
-        const solvedList = solved[key] || [];
-        const allSolved = solvedList.length === puzzlesForDifficulty.length && solvedList.every(x => x === true);
-  
-        // Reset button text and unlock state
-        btn.innerText = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
-        btn.disabled = !unlocked;
-        if (btn.disabled) {
-          btn.classList.add('locked');
-        } else {
-          btn.classList.remove('locked');
-        }
-  
-        if (allSolved) {
-          btn.innerText += ' ✅';
-          unlocked = true;
-        } else {
-          unlocked = false;
-        }
-        
-        if (categoryName === selectedCategory && difficulty === selectedDifficulty && allSolved) {
-          const order = ['easy', 'medium', 'hard'];
-          const currentIndex = order.indexOf(difficulty);
-          const nextDifficulty = order[currentIndex + 1];
-        
-          if (nextDifficulty && allPuzzles[categoryName][nextDifficulty]) {
-            const nextKey = `${categoryName}_${nextDifficulty}`;
-            if (!solved[nextKey]) {
-              solved[nextKey] = Array(allPuzzles[categoryName][nextDifficulty].length).fill(false);
-            }
-        
-            setTimeout(() => {
-              selectDifficulty(nextDifficulty);
-        
-              setTimeout(() => {
-                const input = document.getElementById('userInput');
-                if (input) input.focus();
-              }, 100);
-            }, 400);
-          }
-        }
-        
 
-      });
-  
-      // Optional: update category label if all 3 are done
-      const categoryLabel = category.querySelector('span') || category.firstChild;
-      const originalLabel = getCategoryLabel(categoryName);
-      categoryLabel.textContent = originalLabel;
-  
-      const allUnlocked = Array.from(difficultyButtons).every(btn => !btn.disabled && btn.innerText.includes('✅'));
-      if (allUnlocked) {
-        categoryLabel.textContent += ' ✅';
-      }
-    });
-  }
   function unlockAll() {
-    const categoryElements = document.querySelectorAll('.category');
+    const groupButtons = document.querySelectorAll('.group-button');
   
-    categoryElements.forEach(category => {
-      const difficultyButtons = category.querySelectorAll('.difficulty-buttons button');
-      difficultyButtons.forEach(btn => {
-        btn.disabled = false;
-        btn.classList.remove('locked');
-      });
+    groupButtons.forEach(btn => {
+      btn.disabled = false;
+      btn.classList.remove('locked');
+  
+      const groupName = btn.dataset.group;
+      const puzzlesForGroup = allPuzzles[groupName];
+      const key = groupName;
+      const solvedList = solved[key] || [];
+  
+      const allSolved = solvedList.length === puzzlesForGroup.length &&
+                        solvedList.every(x => x === true);
+  
+      // Update label
+      let label = `Group ${groupName.toUpperCase()}`;
+      if (allSolved) {
+        label += ' ✅';
+      }
+      btn.innerText = label;
     });
   }
 
+  function resetProgress() {
+    localStorage.removeItem('solvedPuzzles');
+    solved = {};
+  
+    currentGroup = "i"; // Reset to first group
+    currentPuzzle = 0;
+  
+    // Reset group button UI
+    const allGroupButtons = document.querySelectorAll('.group-button');
+    allGroupButtons.forEach(btn => btn.classList.remove('active'));
+  
+    const firstGroupButton = document.querySelector('.group-button[data-group="i"]');
+    if (firstGroupButton) firstGroupButton.classList.add('active');
+  
+    startGame();
+    updateProgress();
+    renderGroupButtons();
+  }  
+
+  function revealAnswer() {
+    const puzzle = puzzles[currentPuzzle];
+    const input = document.getElementById("userInput");
+    if (!input || input.disabled) return;
+  
+    const answer = Array.isArray(puzzle.answer) ? puzzle.answer[0] : puzzle.answer;
+    input.value = answer;
+    checkAnswer();
+  }
+
+  function renderGroupButtons() {
+    const container = document.getElementById("groupSelector");
+    container.innerHTML = "";
+  
+    const groupKeys = Object.keys(allPuzzles);
+    groupKeys.forEach((group, index) => {
+      const btn = document.createElement("button");
+      btn.textContent = `Group ${group.toUpperCase()}`;
+      btn.dataset.group = group;
+      btn.classList.add("group-button");
+  
+      const isUnlocked = isGroupUnlocked(groupKeys, group);
+      const isSolved = isGroupSolved(group);
+  
+      if (!isUnlocked) {
+        btn.disabled = true;
+        btn.textContent += " 🔒";
+      } else if (isSolved) {
+        btn.textContent += " ✅";
+      }
+  
+      // Highlight currently selected group
+      if (group === currentGroup) {
+        btn.classList.add("active");
+      }
+  
+      btn.onclick = () => {
+        currentGroup = group;
+  
+        // Remove active class from all buttons
+        document.querySelectorAll(".group-button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        setTimeout(() => {
+          const input = document.getElementById("userInput");
+          if (input && !input.disabled) input.focus();
+        }, 100);
+        
+        loadGroup(group);
+      };
+  
+      container.appendChild(btn);
+    });
+  }
+
+  function isGroupUnlocked(groupOrder, groupName) {
+    const idx = groupOrder.indexOf(groupName);
+    if (idx === 0) return true;
+  
+    const prevGroup = groupOrder[idx - 1];
+    const solvedList = solved[prevGroup] || [];
+    const total = allPuzzles[prevGroup].length;
+    const correct = solvedList.filter(x => x).length;
+  
+    return total > 0 && correct / total >= UNLOCK_THRESHOLD;
+  }
+  
+  function isGroupSolved(group) {
+    const solvedList = solved[group] || [];
+    return (
+      solvedList.length === allPuzzles[group].length &&
+      solvedList.every(x => x)
+    );
+  }
+  
+  function loadGroup(group) {
+    currentGroup = group;
+    puzzles = allPuzzles[group];
+    const solvedList = solved[group] || Array(puzzles.length).fill(false);
+    solved[group] = solvedList;
+  
+    const firstUnsolved = solvedList.findIndex(x => !x);
+    currentPuzzle = firstUnsolved === -1 ? 0 : firstUnsolved;
+  
+    loadPuzzle();
+    updateProgress();
+    renderGroupButtons(); // refresh unlocks
+  }
+    
+  
   document.addEventListener('keydown', function (event) {
     // Ignore if focus is on input
     const activeElement = document.activeElement;
@@ -409,8 +424,6 @@ function startGame() {
     }
   });
   
-generateCategoryButtons();
-handleCategoryClick(selectedCategory);
-selectDifficulty(selectedDifficulty);
 startGame();
-checkSectionCompletion();
+renderGroupButtons();
+loadGroup(currentGroup);
