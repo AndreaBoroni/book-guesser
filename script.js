@@ -229,20 +229,19 @@ function startGame() {
         renderGroupButtons(); // check if new group should unlock
       }
 
-  
       puzzleBox.classList.add('solved');
   
       setTimeout(() => {
         if (currentPuzzle < puzzles.length - 1) {
           currentPuzzle++;
-          loadPuzzle(true);
-          setTimeout(() => {
-            const nextInput = document.getElementById('userInput');
-            if (nextInput && !nextInput.disabled) {
-              nextInput.focus();
-            }
-          }, 100);
         }
+        loadPuzzle(true);
+        setTimeout(() => {
+          const nextInput = document.getElementById('userInput');
+          if (nextInput && !nextInput.disabled) {
+            nextInput.focus();
+          }
+        }, 100);
       }, 300);
     }
   }
@@ -291,8 +290,7 @@ function startGame() {
       unlockMessage.textContent = "";
     }
 
-  }
-  
+  }  
   
   function updateButtons() {
     document.getElementById('prevBtn').disabled = (currentPuzzle === 0);
