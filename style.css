@@ -1,12 +1,29 @@
 
 body {
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI", "Roboto", "Helvetica", sans-serif;
+  font-family: "Noto Color Emoji", "Segoe UI Emoji", "Apple Color Emoji", "Segoe UI", "Roboto", "Helvetica", sans-serif;
+
   
   margin: 0;
   padding: 20px;
-  background: linear-gradient(135deg, #121212, #1c1c1c, #222222);
-  background-size: 400% 400%;
+  background-image: url("bg2.png"); /* or "assets/pattern.png" */
+  background-repeat: repeat;
+  background-size: auto;
+  background-size:300px 300px;
+  background-color: #121212;
   color: #e0e0e0;
+  position: relative;
+
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark transparent layer */
+  z-index: -1;
 }
 
   #container {
@@ -80,9 +97,9 @@ body {
   }
 
   .puzzle:hover,
-.puzzle:focus-within {
-  border-color: #5dade2;
-}
+  .puzzle:focus-within {
+    border-color: #5dade2;
+  }
 
 .solved-answer {
   font-size: 1.4em;
@@ -115,6 +132,18 @@ body {
   .emoji {
     font-size: 3em;
     margin-bottom: 20px;
+  }
+  .emoji-hints {
+    white-space: pre;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  .text-hints {
+    white-space: pre;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-transform: capitalize;
   }
   
   input[type="text"] {
@@ -172,27 +201,27 @@ body {
     transition: color 0.2s ease;
     }
     
-    .difficulty-buttons button:hover {
+  .difficulty-buttons button:hover {
     color: #5dade2;
-    }
+    transform: scale(1.03);
+  }
     
-    .difficulty-buttons button.active {
+  .difficulty-buttons button.active {
     color: #5dade2;
-    }
+  }
   .difficulty-buttons.hidden {
     display: none;
   }
+  
   #gameWrapper {
     position: relative;
     flex-grow: 1;
+    margin-left: 30px; /* adjust the space as needed */
   }
   
   #gameArea {
     width: 100%;
-    max-width: 1000px;
-    padding: 40px;
   }
-  
 
   #prevBtn, #nextBtn {
     background-color: #121212;
@@ -217,11 +246,13 @@ body {
   #prevBtn:hover .arrow-icon,
   #nextBtn:hover .arrow-icon {
     stroke: #121212;
+    transform: scale(1.03);
   }
   
   #prevBtn:hover, #nextBtn:hover {
     background-color: #5dade2;
     box-shadow: 0 0 12px #5dade2;
+    transform: scale(1.03);
   }
   
   #prevBtn:disabled, #nextBtn:disabled {
@@ -354,10 +385,81 @@ body {
   .group-button:hover:not(:disabled) {
     background-color: #ffffff;
     color: #000;
+    transform: scale(1.03);
   }
   
   .group-button:disabled {
     opacity: 0.4;
-    cursor: not-allowed;
+    cursor: unset;
+  }
+  
+  .group-button-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .group-tooltip {
+    visibility: hidden;
+    background-color: #1c1c1c;
+    color: #ccc;
+    text-align: center;
+    border-left: 4px solid #5dade2;
+    padding: 8px;
+    border-radius: 8px;
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    width: 220px;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .group-button-wrapper:hover .group-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .group-separator {
+    margin: 15px 0 8px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #5dade2;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 20px;
+  }
+  
+  .button-group button {
+    background-color: #333;
+    color: #e0e0e0;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  
+  .button-group button:hover {
+    background-color: #5dade2;
+    color: #fff;
+    transform: scale(1.03);
+  }
+
+  .button-group button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    transform: none;
   }
   

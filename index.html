@@ -16,7 +16,9 @@
         ℹ️ Rules
         <div class="info-box">
           <ul>
-            <li><strong>'( )'</strong> means the emojis form one word or part of a word (e.g. (🤏🐎) -> Little + Horse = Pony</li>
+            <li><strong>'( )'</strong> Emojis inside parentheses form a conceptual or symbolic word when combined (e.g. (🤏🐎) -> Little + Horse = Pony</li>
+            <li><strong>'[ ]'</strong> Emojis inside brackets form a literal compound word (e.g. [🌞🌻] -> Sun + Flower = Sunflower</li>
+            <li>Parentheses and brackets can be combined</li>
             <li><strong>'s'</strong> means plural (e.g., 🐶s = dogs)</li>
             <li>Emojis represent only the <strong>title</strong> and not the plot/author/characters</li>
             <li>You may not know all the books, a little help from Google is allowed 😉</li>
@@ -28,43 +30,42 @@
           
     <div id="gameWrapper">
       
-        <div id="gameArea">
+      <div id="gameArea">
         <div id="game">
-            <button id="prevBtn" onclick="prevPuzzle()" aria-label="Previous">
-                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                     stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
+          <button id="prevBtn" onclick="prevPuzzle()" aria-label="Previous">
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+          </button>
               
-            <div class="puzzle" id="puzzleArea"></div>
+          <div class="puzzle" id="puzzleArea"></div>
 
-            <button id="nextBtn" onclick="nextPuzzle()" aria-label="Next">
-                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                     stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-
+          <button id="nextBtn" onclick="nextPuzzle()" aria-label="Next">
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+          </button>
         </div>
 
         <div id="progressContainer">
-            <div id="progressBar"></div>
+          <div id="progressBar"></div>
         </div>
         <div id="unlockMessage" style="text-align:center; font-size: 0.95em; margin-top: 10px; color: #aaa;"></div>
 
-        
-        </div>
+      </div>
     </div>
-  </div>
-<!-- 
-  <button id="unlockAllBtn" onclick="unlockAll()" style="margin: 20px; padding: 10px;">
-    🔓 Unlock All Levels
-  </button> -->
-  <button onclick="resetProgress()" style="margin: 10px;">🗑️ Reset Progress</button>
-  <button id="revealAnswerBtn" onclick="revealAnswer()" style="margin-top: 10px;">
-    🕵️ Reveal Answer
-  </button>
+    <div class="button-group">
+      <button id="hintBtn" onclick="addHint()">💡 Hint</button>
+      <button id="resetHintBtn" onclick="resetHints()">🔄 Reset Hints</button>
+      <button id="revealAnswerBtn" onclick="revealAnswer()">🕵️ Reveal Answer</button>
+      <br>
+      <br>
+      <button onclick="shareProgress()">📤 Share Progress</button>
+      <button onclick="resetProgress()">🗑️ Reset Progress</button>
+    </div>
   <script src="script.js"></script>
 </body>
 </html>
+
