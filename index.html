@@ -8,18 +8,19 @@
 </head>
 <body>
   <h1 class="main-title">🕵🏻 Guess the Book Title! 📕</h1>
-  <div id="overallProgressText"></div>
   
-  <div id="container">
+  <div class="app-container">
+    <button id="mobileMenuToggle" aria-label="Toggle Menu">☰</button>
+
     <div id="sidebar">
       <div class="info-hover">
         ℹ️ Rules
         <div class="info-box">
           <ul>
-            <li><strong>'( )'</strong> Emojis inside parentheses form a conceptual or symbolic word when combined (e.g. (🤏🐎) -> Little + Horse = Pony</li>
-            <li><strong>'[ ]'</strong> Emojis inside brackets form a literal compound word (e.g. [🌞🌻] -> Sun + Flower = Sunflower</li>
-            <li><strong>'s'</strong> means plural (e.g., 🐶s = dogs)</li>
             <li>Emojis represent only the <strong>title</strong> and not the plot/author/characters</li>
+            <li><strong>'s'</strong> means plural (e.g., 🐶s = dogs)</li>
+            <li><strong>'( )'</strong> form a conceptual or symbolic word when combined (e.g. (🤏🐎) -> Little + Horse = Pony)</li>
+            <li><strong>'[ ]'</strong> form a literal compound word (e.g. [🌞🌻] -> Sun + Flower = Sunflower)</li>
             <li>Use the <strong>💡 hints</strong> if you are stuck</li>
           </ul>
         </div>
@@ -28,8 +29,10 @@
     </div>
           
     <div id="gameWrapper">
-      
       <div id="gameArea">
+        
+        <div id="progressBoxes" style="display: flex; gap: 5px; justify-content: center; margin-bottom: 10px;"></div>
+        <br>
         <div id="game">
           <button id="prevBtn" onclick="prevPuzzle()" aria-label="Previous">
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -48,11 +51,6 @@
           </button>
         </div>
 
-        <div id="progressContainer">
-          <div id="progressBar"></div>
-        </div>
-        <div id="unlockMessage" style="text-align:center; font-size: 0.95em; margin-top: 10px; color: #aaa;"></div>
-
       </div>
     </div>
     <div class="button-group">
@@ -62,12 +60,23 @@
       </div>
       <button id="resetHintBtn" onclick="resetHints()">🔄 Reset Hints</button>
       <button id="revealAnswerBtn" onclick="revealAnswer()">🕵️ Reveal Answer</button>
+      <button id="unsolveBtn" onclick="unsolveCurrentPuzzle()">🧹 Unsolve</button>
       <br>
       <br>
       <button onclick="shareProgress()">📤 Share Progress</button>
       <button onclick="resetProgress()">🗑️ Reset Progress</button>
     </div>
+  </div>
   <script src="script.js"></script>
+  <script>
+    const toggleBtn = document.getElementById("mobileMenuToggle");
+    const sidebar = document.getElementById("sidebar");
+  
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+    });
+  </script>
+  
 </body>
 </html>
 

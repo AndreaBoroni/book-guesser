@@ -13,23 +13,6 @@ the war of the worlds
 the time machine
 the invisible man
 
-the wheel of time
-the eye of the world
-the great hunt
-the dragon reborn
-the shadow rising
-the fires of heaven
-lord of chaos
-a crown of swords
-the path of daggers
-winter's heart
-crossroads of twilight
-new spring
-knife of dreams
-the gathering storm
-towers of midnight
-a memory of light
-
 The Lion, the Witch and the Wardrobe (1950)
 Prince Caspian (1951)
 The Voyage of the Dawn Treader (1952)
@@ -41,7 +24,7 @@ The Last Battle (1956)
 
 // { emoji: "🤴(🇷🇺🇰🇿🇹🇲🇮🇷🇦🇿⛰️🌊⛰️)", answer: "prince caspian" },
 // { emoji: "🥈🪑", answer: "the silver chair" },
-// { emoji: "🦁➕🧙🏻‍♀️➕(👕👗👔🗄️)", answer: "the lion the witch and the wardrobe" },
+
 
 const UNLOCK_THRESHOLD = 0.6;
 
@@ -64,10 +47,10 @@ const UNLOCK_THRESHOLD = 0.6;
 // { emoji: "🧈⚔️📖", answer: "butter battle book" },
 // { emoji: "🔊➕😡", answer: "the sound and the fury" },
 // { emoji: "(💨💨💨)👋🏻", answer: "wuthering heights" },
-
+// { emoji: "♜s🌍", answer: "The Pillars of the Earth" },
 
 const allPuzzles = {
-  "i": [
+  "Group I": [
     { emoji: "1️⃣9️⃣8️⃣4️⃣", answer: "1984", hint1: "1️⃣9️⃣8️⃣4️⃣", hint2: "_ _ _ _", author: "George Orwell" },
     { emoji: "🤴💍s", answer: "The Lord of the Rings", hint1: "The 🤴 of the 💍s", hint2: "The _ _ _ _ of the _ _ _ _ _", author: "J. R. R. Tolkien" },
     { emoji: "🛣️", answer: "The Road", hint1: "The 🛣️", hint2: "The _ _ _ _", author: "Cormac McCarthy" },
@@ -79,7 +62,7 @@ const allPuzzles = {
     { emoji: "🟩🥚s➕🍖", answer: "Green Eggs and Ham", hint1: "🟩 🥚s and 🍖", hint2: "_ _ _ _ _   _ _ _ _ and _ _ _", author: "Dr. Seuss" },
     { emoji: "[💧🚢]👇", answer: "Watership Down", hint1: "[💧🚢] 👇", hint2: "_ _ _ _ _ _ _ _ _   _ _ _ _", author: "Richard Adams" },
   ],
-  "ii": [
+  "Group II": [
     { emoji: "🐁s➕👨s", answer: "Of Mice and Men", hint1: "Of 🐁s and 👨s", hint2: "Of _ _ _ _ and _ _ _", author: "John Steinbeck" },
     { emoji: "👼s➕😈s", answer: "Angels and Demons", hint1: "👼s and 😈s", hint2: "_ _ _ _ _ _ and _ _ _ _ _ _", author: "Dan Brown" },
     { emoji: "♾️(🤡💬😂)", answer: "Infinite Jest", hint1: "♾️ (🤡💬😂)", hint2: "_ _ _ _ _ _ _ _   _ _ _ _", author: "David Foster Wallace" },
@@ -91,7 +74,7 @@ const allPuzzles = {
     { emoji: "📜(🤏🏙️)s", answer: "Paper Towns", hint1: "📜 (🤏🏙️)s", hint2: "_ _ _ _ _  _ _ _ _ _", author: "John Green" },
     { emoji: "🤏👩s", answer: "Little Women", hint1: "🤏 👩s", hint2: "_ _ _ _ _ _  _ _ _ _ _", author: "Louisa May Alcott" }
   ],
-  "iii": [
+  "Group III": [
     { emoji: "(👋😢)💪s", answer: "A Farewell to Arms", hint1: "A (👋😢) to 💪s", hint2: "A _ _ _ _ _ _ _ _ to _ _ _ _", author: "Ernest Hemingway"},
     { emoji: "🏰", answer: "The Castle", hint1: "The 🏰", hint2: "The _ _ _ _ _ _", author: "Franz Kafka" },
     { emoji: "🎣2️⃣2️⃣", answer: ["Catch-22", "Catch 22"], hint1: "🎣-2️⃣2️⃣", hint2: "_ _ _ _ _ - _ _", author: "Joseph Heller" },
@@ -103,7 +86,7 @@ const allPuzzles = {
     { emoji: "5️⃣0️⃣🕶️(⬜↔️⬛)", answer: ["Fifty Shades of Gray", "50 Shades of Gray"], hint1: "5️⃣0️⃣ 🕶️ of (⬜↔️⬛)", hint2: "_ _ _ _ _   _ _ _ _ _ _ of _ _ _ _", author: "E. L. James" },
     { emoji: "(👨👍🚘🧗‍♂️)📋🌌", answer: "The Hitchhiker's Guide to the Galaxy", hint1: "The (👨👍🚘🧗‍♂️)'s 📋 to the 🌌", hint2: "The _ _ _ _ _ _ _ _ _ _'s _ _ _ _ _ to the _ _ _ _ _ _", author: "Douglas Adams"  }
   ],
-  "iv": [
+  "Group IV": [
     { emoji: "🍇🤬", answer: "The Grapes of Wrath", hint1: "The 🍇 of 🤬", hint2: "The _ _ _ _ _ _ of _ _ _ _ _", author: "John Steinbeck" },
     { emoji: "🌃(📚🏠)", answer: "The Midnight Library", hint1: "The 🌃 (📚🏠)", hint2: "The _ _ _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Matt Haig" },
     { emoji: "[🕓(💼🛠️👨‍💻)]🍊", answer: "A Clockwork Orange", hint1: "A [🕓(💼🛠️👨‍💻)] 🍊", hint2: "A _ _ _ _ _ _ _ _ _   _ _ _ _ _ _", author: "Anthony Burgess" },
@@ -115,7 +98,7 @@ const allPuzzles = {
     { emoji: "[🟨🙂]", answer: "Yellowface", hint1: "[🟨🙂]", hint2: " _ _ _ _ _ _ _ _ _ _", author: "R. F. Kuang" },
     { emoji: "👸👰", answer: "The Princess Bride", hint1: "The 👸 👰", hint2: "The _ _ _ _ _ _ _ _   _ _ _ _ _", author: "William Goldman"  }
   ],
-  "v": [
+  "Group V": [
     { emoji: "🐱➡️🎩", answer: "The Cat in the Hat", hint1: "The 🐱 in the 🎩", hint2: "The _ _ _ in the _ _ _", author: "Dr. Seuss" },
     { emoji: "(👨🎲🎮)(🎲🎮)s", answer: "The Player of Games", hint1: "The (👨🎲🎮) of (🎲🎮)s", hint2: "The _ _ _ _ _ _ of _ _ _ _ _", author: "Iain M. Banks" },
     { emoji: "1️⃣0️⃣0️⃣0️⃣✨☀️s", answer: ["A Thousand Splendid Suns", "1000 Splendid Suns"]  , hint1: "A 1️⃣0️⃣0️⃣0️⃣ ✨ ☀️s", hint2: "A _ _ _ _ _ _ _ _   _ _ _ _ _ _ _ _   _ _ _ _", author: "Khaled Hosseini" },
@@ -127,7 +110,7 @@ const allPuzzles = {
     { emoji: "(🌍🧲🍎)🌈", answer: "Gravity's Rainbow", hint1: "(🌍🧲🍎)'s 🌈", hint2: "_ _ _ _ _ _ _'s _ _ _ _ _ _ _", author: "Thomas Pynchon" },
     { emoji: "🏙️🦴", answer: "City of Bones", hint1: "🏙️ of 🦴s", hint2: "_ _ _ _ of _ _ _ _ _", author: "Cassandra Clare"  }
   ],
-  "vi": [
+  "Group VI": [
     { emoji: "✨", answer: "The Shining", hint1: "The ✨", hint2: "The _ _ _ _ _ _ _", author: "Stephen King" },
     { emoji: "⏳(👨🧳)👰", answer: "The Time Traveler's Wife", hint1: "The ⏳ (👨🧳)'s 👰", hint2: "The _ _ _ _   _ _ _ _ _ _ _ _'s _ _ _ _", author: "Audrey Niffenegger" },
     { emoji: "(👨🔩➡️🥇)", answer: "The Alchemist", hint1: "The (👨🔩➡️🥇)", hint2: "The _ _ _ _ _ _ _ _ _", author: "Paulo Coelho" },
@@ -138,43 +121,60 @@ const allPuzzles = {
     { emoji: "🎨🟪", answer: "The Color Purple", hint1: "The 🎨 🟪", hint2: "The _ _ _ _ _   _ _ _ _ _ _", author: "Alice Walker" },
     { emoji: "🚶2️⃣🌙s", answer: "Walk Two Moons", hint1: "🚶 2️⃣ 🌙s", hint2: "_ _ _ _   _ _ _   _ _ _ _ _", author: "Sharon Creech"  }
   ],
-  // "vii": [
-    // { emoji: "(1️⃣⏳)➕(🔜⏳)🤴", answer: "The once and future king", hint1: "", hint2: "", author: "" },
+  "Group VII": [
+    { emoji: "(1️⃣⏳)➕(🔜⏳)🤴", answer: "The once and future king", hint1: "", hint2: "", author: "" },
+    { emoji: "🌆", answer: "Twilight", hint1: "", hint2: "", author: "" },
+    { emoji: "🦁➕🧙🏻‍♀️➕(👕👗🗄️)", answer: "the lion the witch and the wardrobe" },
+  ],
+  // "VIII": [
   // ],
-  // "viii": [
+  // "IX": [
   // ],
-  // "ix": [
+  // "X": [
   // ],
-  // "x": [
-  // ],
-  "series i": [
+  "Series I": [
+    { emoji: "🎡⏳", answer: "The Wheel of Time", hint1: "The 🎡 of ⏳", hint2: "The _ _ _ _ _ of _ _ _ _", author: "Robert Jordan" },
+    { emoji: "👁️🌍", answer: "The Eye of the World", hint1: "The 👁️ of the 🌍", hint2: "The _ _ _ of the _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "(🏹🦌🥩)", answer: "The Great Hunt", hint1: "The Great Hunt", hint2: "The Great Hunt", author: "Robert Jordan" },
+    { emoji: "🐉[🔁(🐣🤰👶)]", answer: "The Dragon Reborn", hint1: "The 🐉 [🔁(🐣🤰👶)]", hint2: "The _ _ _ _ _ _   _ _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "👥📈", answer: "The Shadow Rising", hint1: "The 👥 📈", hint2: "The _ _ _ _ _ _   _ _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "🔥s(👼⛰️👼)", answer: "The Fires of Heaven", hint1: "The 🔥s of (👼⛰️👼)", hint2: "The _ _ _ _ _ of _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "🤴(🌀💥😵‍💫)", answer: "Lord of Chaos", hint1: "🤴 of (🌀💥😵‍💫)", hint2: "_ _ _ _ of _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "👑🗡️s", answer: "A Crown of Swords", hint1: "A 👑 of 🗡️s", hint2: "A _ _ _ _ _ of _ _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "(🤏🛣️)(🤏🗡️)s", answer: "The Path of Daggers", hint1: "The (🤏🛣️) of (🤏🗡️)s", hint2: "The _ _ _ _ of _ _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "(❄️📅)❤️", answer: "Winter's Heart", hint1: "(❄️📅)'s ❤️", hint2: "_ _ _ _ _ _'s _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "[✝️🛣️]s🌆", answer: "Crossroads of Twilight", hint1: "[✝️🛣️]s of 🌆", hint2: "_ _ _ _ _ _ _ _ _ of _ _ _ _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "🆕(🌷📅)", answer: "New Spring", hint1: "New (🌷📅)", hint2: "New _ _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "🔪(🛌💭)s", answer: "Knife of Dreams", hint1: "🔪 of (🛌💭)s", hint2: "_ _ _ _ _ of _ _ _ _ _ _", author: "Robert Jordan" },
+    { emoji: "(👨‍👨‍👧‍👧👩‍👩‍👦‍👦🥂🗓️)🌪️", answer: "The Gathering Storm", hint1: "The (👨‍👨‍👧‍👧👩‍👩‍👦‍👦🥂🗓️) 🌪️", hint2: "The _ _ _ _ _ _ _ _ _   _ _ _ _ _", author: "Robert Jordan & Brandon Sanderson" },
+    { emoji: "♜s🌃", answer: "Towers of Midnight", hint1: "♜s of 🌃", hint2: "_ _ _ _ _ _ of _ _ _ _ _ _ _", author: "Robert Jordan & Brandon Sanderson" },
+    { emoji: "(🙂💭💾)💡", answer: "A Memory of Light", hint1: "A (🙂💭💾) of 💡", hint2: "A _ _ _ _ _ _ of _ _ _ _ _", author: "Robert Jordan & Brandon Sanderson" },
+  ],
+  "Series II": [
+    { emoji: "(♫♪♫)🧊➕🔥", answer: "A Song of Ice and Fire", hint1: "A 🎵 of 🧊 and 🔥", hint2: "A _ _ _ _ of _ _ _ and _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "(🎲🎮)(👑🪑)s", answer: "A Game of Thrones", hint1: "A (🎲🎮) of (👑🪑)s", hint2: "A _ _ _ _ of _ _ _ _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "(🗡️💥🗡️)🤴s", answer: "A Clash of Kings", hint1: "A 🗡️ of 🤴s", hint2: "A _ _ _ _ _ of _ _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "🌪️🗡️s", answer: "A Storm of Swords", hint1: "A 🌪️ of 🗡️s", hint2: "A _ _ _ _ _ of _ _ _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "(🍽️🎉🥂)(🐦‍⬛)s", answer: "A Feast for Crows", hint1: "A (🍽️🎉🥂) for (🐦‍⬛)s", hint2: "A _ _ _ _ _ for _ _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "(💃🏻🕺🏽)🐉s", answer: "A Dance with Dragons", hint1: "A (💃🏻🕺🏽) with 🐉s", hint2: "A _ _ _ _ _ with _ _ _ _ _ _ _", author: "George R. R. Martin" }
+  ],
+  "Series III": [
     { emoji: "(👩🏻‍⚖️⚖️🏛️)(🌵🥀)s➕🌹s", answer: "A Court of Thorns and Roses", hint1: "A (👩🏻‍⚖️⚖️🏛️) of (🌵🥀)s and 🌹s", hint2: "A _ _ _ _ _ of _ _ _ _ _ _ and _ _ _ _ _", author: "Sarah J. Maas" },
     { emoji: "(👩🏻‍⚖️⚖️🏛️)🌫️➕😡", answer: "A Court of Mist and Fury", hint1: "A (👩🏻‍⚖️⚖️🏛️) of 🌫️ and 😡", hint2: "A _ _ _ _ _ of _ _ _ _ and _ _ _ _", author: "Sarah J. Maas" },
     { emoji: "(👩🏻‍⚖️⚖️🏛️)(🕊️💪)s➕🏚️", answer: "A Court of Wings and Ruin", hint1: "A (👩🏻‍⚖️⚖️🏛️) of (🕊️💪)s and 🏚️", hint2: "A _ _ _ _ _ of _ _ _ _ _ and _ _ _ _", author: "Sarah J. Maas" },
     { emoji: "(👩🏻‍⚖️⚖️🏛️)🥶➕[⭐💡]", answer: "A Court of Frost and Starlight", hint1: "A (👩🏻‍⚖️⚖️🏛️) of 🥶 and [⭐💡]", hint2: "A _ _ _ _ _ of _ _ _ _ _ and _ _ _ _ _ _ _ _ _", author: "Sarah J. Maas" },
     { emoji: "(👩🏻‍⚖️⚖️🏛️)🥈🔥s", answer: "A Court of Silver Flames", hint1: "A (👩🏻‍⚖️⚖️🏛️) of 🥈 🔥s", hint2: "A _ _ _ _ _ of _ _ _ _ _ _   _ _ _ _ _ _", author: "Sarah J. Maas" }
   ],
-  "series ii": [
-    { emoji: "(♫♪♫)🧊➕🔥", answer: "A Song of Ice and Fire", hint1: "A 🎵 of 🧊 and 🔥", hint2: "A _ _ _ _ of _ _ _ and _ _ _ _", author: "George R. R. Martin" },
-    { emoji: "(🎲🎮)(👑🪑)s", answer: "A Game of Thrones", hint1: "A (🎲🎮) of (👑🪑)s", hint2: "A _ _ _ _ of _ _ _ _ _ _ _", author: "George R. R. Martin" },
-    { emoji: "(🗡️💥🗡️)🤴s", answer: "A Clash of Kings", hint1: "A 🗡️ of 🤴s", hint2: "A _ _ _ _ _ of _ _ _ _ _", author: "George R. R. Martin" },
-    { emoji: "🌪️⚔️", answer: "A Storm of Swords", hint1: "A 🌪️ of ⚔️s", hint2: "A _ _ _ _ _ of _ _ _ _ _ _", author: "George R. R. Martin" },
-    { emoji: "(🍽️🎉🥂)(🐦‍⬛)s", answer: "A Feast for Crows", hint1: "A (🍽️🎉🥂) for (🐦‍⬛)s", hint2: "A _ _ _ _ _ for _ _ _ _ _", author: "George R. R. Martin" },
-    { emoji: "(💃🏻🕺🏽)🐉s", answer: "A Dance with Dragons", hint1: "A (💃🏻🕺🏽) with 🐉s", hint2: "A _ _ _ _ _ with _ _ _ _ _ _ _", author: "George R. R. Martin" }
-  ],
+  
 };
 
 const unlockThresholds = {
-  "series i": 20,
-  "series ii": 30,
+  "Series I": 20,
+  "Series II": 30,
+  "Series III": 40,
 };
 
-const specialNames = {
-  "series i": "Series I",
-  "series ii": "Series II",
-};
-
-let currentGroup = "i"; // default group
+let currentGroup = "Group I"; // default group
 let solved = JSON.parse(localStorage.getItem("solvedPuzzles")) || {};
 let hintLevels = JSON.parse(localStorage.getItem("hintLevels")) || {};
 let currentPuzzle = 0;
@@ -233,7 +233,6 @@ function startGame() {
   }
 
   loadPuzzle(false);
-  updateProgress();
   renderGroupButtons();
 }
   
@@ -277,34 +276,42 @@ function startGame() {
         area.classList.add('solved');
       }
     }
+
+    updateProgress();
   }
   
   function updatePuzzleHTML() {
     const puzzle = allPuzzles[currentGroup][currentPuzzle];
     const area = document.getElementById('puzzleArea');
     let content = `<div class="emoji">${puzzle.emoji}</div>`;
-  
+    
     if (isSolved(puzzle.answer)) {
       const answerText = Array.isArray(puzzle.answer) ? puzzle.answer[0] : puzzle.answer;
       content += `<div class="solved-answer">${answerText}</div>`;
+      content += `<div class="solved-answer">${puzzle.author}</div>`;
     } else {
-      
       content += `<br>`;
       const hintLevel = getHintLevel(puzzle.answer);
       if (hintLevel >= 1 && puzzle.hint1)  content += `<div class="emoji-hints">${puzzle.hint1}</div>`;
       if (hintLevel >= 2 && puzzle.hint2)  content += `<div class="text-hints">${puzzle.hint2}</div>`;
-      if (hintLevel >= 3 && puzzle.author) content += `<div class="text-hints">Author: ${puzzle.author}</div>`;
+      if (hintLevel >= 3 && puzzle.author) content += `<div class="text-hints">${puzzle.author}</div>`;
   
-      content += `<input type="text" id="userInput" placeholder="Your guess" oninput="checkAnswer()">`;
+      content += `<input type="text" id="userInput" placeholder="" oninput="checkAnswer()">`;
     }
-  
+
     area.innerHTML = content;
     
     const hintLevel = getHintLevel(puzzle.answer);
-    const hintBtn     = document.getElementById("hintBtn");
-    const resetHintBtn = document.getElementById("resetHintBtn");
-    hintBtn.disabled      = !shouldEnableHintButton(puzzle, hintLevel);
-    resetHintBtn.disabled = !shouldEnableResetHintButton(puzzle, hintLevel);
+    
+    const hintBtn         = document.getElementById("hintBtn");
+    const resetHintBtn    = document.getElementById("resetHintBtn");
+    const revealAnswerBtn = document.getElementById("revealAnswerBtn");
+    const unsolveBtn      = document.getElementById("unsolveBtn");
+
+    hintBtn.disabled         = !shouldEnableHintButton(puzzle, hintLevel);
+    resetHintBtn.disabled    = !shouldEnableResetHintButton(puzzle, hintLevel);
+    revealAnswerBtn.disabled = isSolved(puzzle.answer);
+    unsolveBtn.disabled      = !isSolved(puzzle.answer);
     
     updateHintTooltip();
   }
@@ -402,43 +409,21 @@ function startGame() {
   }
 
   function updateProgress() {
-    const total = allPuzzles[currentGroup].length;
-    const solvedCount = allPuzzles[currentGroup].filter(p => isSolved(p.answer)).length;
-    const percentage = (solvedCount / total) * 100;
+    const container = document.getElementById('progressBoxes');
+    container.innerHTML = '';
+  
+    const puzzles = allPuzzles[currentGroup];
+  
+    for (let i = 0; i < puzzles.length; i++) {
+      const box = document.createElement('div');
+      box.classList.add('progress-box');
+      if (solved[normalizeAnswer(puzzles[i].answer)]) box.classList.add('solved');
+      if (i === currentPuzzle) box.classList.add('current');
+    
+      container.appendChild(box);
+    }    
+  }  
 
-    document.getElementById('progressBar').style.width = percentage + '%';
-
-
-    const groupNames = Object.keys(allPuzzles);
-    const currentIndex = groupNames.indexOf(currentGroup);
-    const nextGroup = groupNames[currentIndex + 1];
-    const unlockMessage = document.getElementById('unlockMessage');
-  
-    if (nextGroup) {
-      const puzzlesInGroup = allPuzzles[currentGroup];
-      let solvedCount = 0;
-  
-      for (let puzzle of puzzlesInGroup) {
-        const key = normalizeAnswer(puzzle.answer);
-        if (solved[key]) {
-          solvedCount++;
-        }
-      }
-  
-      const total = puzzlesInGroup.length;
-      const progressRatio = solvedCount / total;
-  
-      if (progressRatio < UNLOCK_THRESHOLD) {
-        const needed = Math.ceil(UNLOCK_THRESHOLD * total) - solvedCount;
-        unlockMessage.textContent = `Solve ${needed} more to unlock Group ${nextGroup.toUpperCase()}`;
-      } else {
-        unlockMessage.textContent = `✅ Group ${nextGroup.toUpperCase()} unlocked!`;
-      }
-    } else {
-      unlockMessage.textContent = "";
-    }
-  }
-  
   function unlockAll() {
     const groupButtons = document.querySelectorAll('.group-button');
   
@@ -455,7 +440,7 @@ function startGame() {
                         solvedList.every(x => x === true);
   
       // Update label
-      let label = `Group ${groupName.toUpperCase()}`;
+      let label = `${groupName}`;
       if (allSolved) {
         label += ' ✅';
       }
@@ -469,19 +454,18 @@ function startGame() {
     solved = {};
     hintLevels = {};
   
-    currentGroup = "i"; // Reset to first group
+    currentGroup = "Group I"; // Reset to first group
     currentPuzzle = 0;
   
     // Reset group button UI
     const allGroupButtons = document.querySelectorAll('.group-button');
     allGroupButtons.forEach(btn => btn.classList.remove('active'));
   
-    const firstGroupButton = document.querySelector('.group-button[data-group="i"]');
+    const firstGroupButton = document.querySelector('.group-button[data-group="Group I"]');
     if (firstGroupButton) firstGroupButton.classList.add('active');
   
     renderGroupButtons();
     startGame();
-    updateProgress();
   }
    
 
@@ -507,7 +491,7 @@ function startGame() {
     // Regular Groups
     const separator = document.createElement("div");
     separator.className = "group-separator";
-    separator.textContent = "📅 Progression";
+    separator.textContent = "📈 Progression";
     container.appendChild(separator);
 
     regularGroups.forEach((group, index) => {
@@ -518,7 +502,7 @@ function startGame() {
     if (specialGroups.length > 0) {
       const separator = document.createElement("div");
       separator.className = "group-separator";
-      separator.textContent = "💎 Special Groups";
+      separator.textContent = "📚 Series";
       container.appendChild(separator);
   
       specialGroups.forEach(group => {
@@ -532,11 +516,7 @@ function startGame() {
     wrapper.className = "group-button-wrapper";
   
     const btn = document.createElement("button");
-    if (specialNames[group]) {
-      btn.textContent = specialNames[group];
-    } else {
-      btn.textContent = `Group ${group.toUpperCase()}`;
-    }
+    btn.textContent = group;
     btn.dataset.group = group;
     btn.classList.add("group-button");
   
@@ -553,7 +533,7 @@ function startGame() {
       if (unlockThresholds[group]) {
         tooltip.textContent = `Unlocks after solving ${unlockThresholds[group]} total puzzles`;
       } else if (index > 0) {
-        tooltip.textContent = `Unlocks after finishing ${Math.round(UNLOCK_THRESHOLD * 100)}% of Group ${groupKeys[index - 1].toUpperCase()}`;
+        tooltip.textContent = `Unlocks after finishing ${Math.round(UNLOCK_THRESHOLD * 100)}% of ${groupKeys[index - 1]}`;
       }
   
       wrapper.appendChild(tooltip);
@@ -621,7 +601,6 @@ function startGame() {
     currentPuzzle = firstUnsolvedIndex;
   
     loadPuzzle();
-    updateProgress();
     renderGroupButtons(); // refresh unlocks
   }  
     
@@ -638,7 +617,7 @@ function startGame() {
       ).join("");
       const solvedCount = puzzles.filter(p => isSolved(p.answer)).length;
   
-      output += `Group ${group.toUpperCase()}   ${line}\n`;
+      output += `${group}   ${line}\n`;
       totalSolved += solvedCount;
       totalCount += puzzles.length;
     }
@@ -708,8 +687,16 @@ function updateHintTooltip() {
   }
 }
 
-
+function unsolveCurrentPuzzle() {
+  const puzzle = allPuzzles[currentGroup][currentPuzzle];
+  const key = normalizeAnswer(puzzle.answer);
+  if (solved[key]) {
+    delete solved[key];
+    localStorage.setItem("solvedPuzzles", JSON.stringify(solved));
+    loadPuzzle();
+    renderGroupButtons();
+  }
+}
   
 startGame();
-renderGroupButtons();
 loadGroup(currentGroup);
