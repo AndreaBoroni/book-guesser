@@ -6,6 +6,47 @@ moby dick
 big little lies
 the zombie room
 
+The Waste Land
+Four Quartets
+A Handful of Dust
+Brave New World
+Steppenwolf
+The House of the Seven Gables
+The Human Stain
+The Plot Against America
+The Picture of Dorian Gray
+Leaves of Grass
+Invisible Cities
+If on a Winter's Night a Traveller
+The Path to the Nest of Spiders
+Midnight's Children
+Rabbit, Run
+Fathers and Sons
+Fahrenheit 451
+The Red and the Black
+Blood Meridian
+The Woman in White
+Crime and Punishment
+The Idiot
+The Trial
+The methamorphosis
+A Portrait of the Artist as a Young Man
+Pride and Prejudice
+The Magic Mountain
+Heart of Darkness
+the plague
+East of Eden
+Love in the Time of Cholera
+A Passage to India
+The Catcher in the Rye
+The Cherry Orchard
+Three Sisters
+Death On The Nile
+Murder on the Orient Express
+The Long Goodbye
+A Christmas Carol
+Bleak House
+
 the war of the worlds
 the time machine
 the invisible man
@@ -27,7 +68,6 @@ const UNLOCK_THRESHOLD = 0.6;
 
 // { emoji: "[🍈®️]🔀", answer: "oliver twist" },
 // { emoji: "🔔jar", answer: "bell jar" },
-// { emoji: "(❌🤏)😴", answer: "the big sleep" },
 // { emoji: "⬇️🌋", answer: "under the volcano" },
 // { emoji: "⬇️👹☀️", answer: "under satan's sun" },
 // { emoji: "🔴🎪", answer: "the red tent" },
@@ -41,9 +81,7 @@ const UNLOCK_THRESHOLD = 0.6;
 // { emoji: "🏏⏳⬛", answer: "the cricket in times square" },
 // { emoji: "💕🦴s", answer: "lovely bones" },
 // { emoji: "🧈⚔️📖", answer: "butter battle book" },
-// { emoji: "🔊➕😡", answer: "the sound and the fury" },
 // { emoji: "(💨💨💨)👋🏻", answer: "wuthering heights" },
-// { emoji: "♜s🌍", answer: "The Pillars of the Earth" },
 
 const allPuzzles = {
   "Group I": [
@@ -86,7 +124,7 @@ const allPuzzles = {
     { emoji: "🍇🤬", answer: "The Grapes of Wrath", hint1: "The 🍇 of 🤬", hint2: "The _ _ _ _ _ _ of _ _ _ _ _", author: "John Steinbeck" },
     { emoji: "🌃(📚🏠)", answer: "The Midnight Library", hint1: "The 🌃 (📚🏠)", hint2: "The _ _ _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Matt Haig" },
     { emoji: "[🕓(💼🛠️👨‍💻)]🍊", answer: "A Clockwork Orange", hint1: "A [🕓(💼🛠️👨‍💻)] 🍊", hint2: "A _ _ _ _ _ _ _ _ _   _ _ _ _ _ _", author: "Anthony Burgess" },
-    { emoji: "[(🐄🔪🥩)🏠]5️⃣", answer: ["Slaughterhouse-five", "Slaughter-house 5", "Slaughterhouse-5"], hint1: "[(🐄🔪🥩)🏠]-5️⃣", hint2: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ - _ _ _ _", author: "Kurt Vonnegut" },
+    { emoji: "[(🐄🔪🥩)🏠]5️⃣", answer: ["Slaughterhouse-five", "Slaughterhouse five", "Slaughterhouse 5", "Slaughterhouse-5"], hint1: "[(🐄🔪🥩)🏠]-5️⃣", hint2: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ - _ _ _ _", author: "Kurt Vonnegut" },
     { emoji: "[(✒️⚫💧)❤️]", answer: "Inkheart", hint1: "[(✒️⚫💧)❤️]", hint2: "_ _ _ _ _ _ _ _", author: "Cornelia Funke" },
     { emoji: "(💻👨‍💻🌐)", answer: "It", hint1: "(💻👨‍💻🌐)", hint2: "_ _", author: "Stephen King" },
     { emoji: "[⛲🙂]", answer: "The Fountainhead", hint1: "The [⛲🙂]", hint2: "The _ _ _ _ _ _ _ _ _ _ _ _", author: "Ayn Rand" },
@@ -104,7 +142,7 @@ const allPuzzles = {
     { emoji: "[🩸🎵]", answer: "Bloodmusic", hint1: "[🩸🎵]", hint2: "_ _ _ _ _ _ _ _ _ _", author: "Greg Bear" },
     { emoji: "🤫(🤕🏥)", answer: "The Silent Patient", hint1: "The 🤫 (🤕🏥)", hint2: "The _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Alex Michaelides" },
     { emoji: "(🌍🧲🍎)🌈", answer: "Gravity's Rainbow", hint1: "(🌍🧲🍎)'s 🌈", hint2: "_ _ _ _ _ _ _'s _ _ _ _ _ _ _", author: "Thomas Pynchon" },
-    { emoji: "🏙️🦴", answer: "City of Bones", hint1: "🏙️ of 🦴s", hint2: "_ _ _ _ of _ _ _ _ _", author: "Cassandra Clare"  }
+    { emoji: "🏙️🦴s", answer: "City of Bones", hint1: "🏙️ of 🦴s", hint2: "_ _ _ _ of _ _ _ _ _", author: "Cassandra Clare"  }
   ],
   "Group VI": [
     { emoji: "✨", answer: "The Shining", hint1: "The ✨", hint2: "The _ _ _ _ _ _ _", author: "Stephen King" },
@@ -121,6 +159,13 @@ const allPuzzles = {
     { emoji: "(1️⃣⏳)➕(🔜⏳)🤴", answer: "The Once and Future King", hint1: "The (1️⃣⏳) and (🔜⏳) 🤴", hint2: "The _ _ _ _ and _ _ _ _ _ _   _ _ _ _", author: "T. H. White" },
     { emoji: "1️⃣🐟2️⃣🐟🟥🐟🟦🐟", answer: "One Fish Two Fish Red Fish Blue Fish", hint1: "1️⃣ 🐟 2️⃣ 🐟 🟥 🐟 🟦 🐟", hint2: "_ _ _   _ _ _ _   _ _ _   _ _ _ _   _ _ _   _ _ _ _   _ _ _ _   _ _ _ _", author: "Dr. Seuss" },
     { emoji: "👨(⬆️🗻)🏰", answer: "The Man in the High Castle", hint1: "The 👨 in the (⬆️🗻) 🏰", hint2: "The _ _ _ in the _ _ _ _   _ _ _ _ _ _", author: "Philip K. Dick" },
+    { emoji: "(☠️🔪)(🤡🐦)", answer: "To Kill a Mockingbird", hint1: "To (☠️🔪) a (🤡🐦)", hint2: "To _ _ _ _ a _ _ _ _ _ _ _ _ _ _ _", author: "Harper Lee" },
+    { emoji: "1️⃣0️⃣0️⃣(📅🔄)s(❌👨‍👨‍👦‍👦)", answer: ["One Hundred Years of Solitude", "100 Years of Solitude"], hint1: "1️⃣0️⃣0️⃣ (📅🔄)s (❌👨‍👨‍👦‍👦)", hint2: "_ _ _   _ _ _ _ _ _ _   _ _ _ _ _ of _ _ _ _ _ _ _ _", author: "Gabriel García Márquez" },
+    { emoji: "👉[💡🏠]", answer: "To the Lighthouse", hint1: "To the [💡🏠]", hint2: "To the _ _ _ _ _ _ _ _ _ _", author: "Virginia Woolf" },
+    { emoji: "🔊➕😡", answer: "The Sound and the Fury", hint1: "The 🔊 and the 😡", hint2: "The _ _ _ _ _ and the _ _ _ _", author: "William Faulkner"},
+    { emoji: "(❌🤏)😴", answer: "The Big Sleep", hint1: "The (❌🤏) 😴", hint2: "The _ _ _   _ _ _ _ _", author: "Raymond Chandler"},
+    { emoji: "♜s🌍", answer: "The Pillars of the Earth", hint1: "The ♜s of the 🌍", hint2: "The _ _ _ _ _ _ _ of the _ _ _ _ _", author: "Ken Follett"},
+    { emoji: "🍃s🌿", answer: "Leaves of Grass", hint1: "🍃s of 🌿", hint2: "_ _ _ _ _ _ of _ _ _ _ _", author: "Walt Whitman"},
   ],
   "Series I": [
     { emoji: "🤴💍s", answer: "The Lord of the Rings", hint1: "The 🤴 of the 💍s", hint2: "The _ _ _ _ of the _ _ _ _ _", author: "J. R. R. Tolkien" },
@@ -131,7 +176,7 @@ const allPuzzles = {
   "Series II": [
     { emoji: "🎡⏳", answer: "The Wheel of Time", hint1: "The 🎡 of ⏳", hint2: "The _ _ _ _ _ of _ _ _ _", author: "Robert Jordan & Brandon Sanderson" },
     { emoji: "👁️🌍", answer: "The Eye of the World", hint1: "The 👁️ of the 🌍", hint2: "The _ _ _ of the _ _ _ _ _", author: "Robert Jordan" },
-    { emoji: "(🏹🦌🥩)", answer: "The Great Hunt", hint1: "The Great Hunt", hint2: "The Great Hunt", author: "Robert Jordan" },
+    { emoji: "(🏆💯)(🏹🦌🥩)", answer: "The Great Hunt", hint1: "The (🏆💯) (🏹🦌🥩)", hint2: "The _ _ _ _ _   _ _ _ _", author: "Robert Jordan" },
     { emoji: "🐉[🔁(🐣🤰👶)]", answer: "The Dragon Reborn", hint1: "The 🐉 [🔁(🐣🤰👶)]", hint2: "The _ _ _ _ _ _   _ _ _ _ _ _", author: "Robert Jordan" },
     { emoji: "👥📈", answer: "The Shadow Rising", hint1: "The 👥 📈", hint2: "The _ _ _ _ _ _   _ _ _ _ _ _", author: "Robert Jordan" },
     { emoji: "🔥s(👼⛰️👼)", answer: "The Fires of Heaven", hint1: "The 🔥s of (👼⛰️👼)", hint2: "The _ _ _ _ _ of _ _ _ _ _", author: "Robert Jordan" },
@@ -283,7 +328,6 @@ function startGame() {
     const isFirst = currentPuzzle === 0;
     const isFirstSolved = isSolved(allPuzzles[currentGroup][0].answer);
 
-    // ⛔ Block access to locked special puzzles
     if (isSpecialGroup && !isFirst && !isFirstSolved) {
       const area = document.getElementById('puzzleArea');
       area.innerHTML = `<div class="locked-message">🔒 Solve the first puzzle to unlock this one.</div>`;
@@ -307,8 +351,21 @@ function startGame() {
       content += `<input type="text" id="userInput" placeholder="" oninput="checkAnswer()">`;
     }
 
+    // Save user input before DOM update
+    let savedInput = "";
+    const existingInput = document.getElementById("userInput");
+    if (existingInput) {
+      savedInput = existingInput.value;
+    }
+
     area.innerHTML = content;
-    
+
+    // Restore input after re-render
+    const newInput = document.getElementById("userInput");
+    if (newInput) {
+      newInput.value = savedInput;
+    }
+
     const hintLevel = getHintLevel(puzzle.answer);
     
     const hintBtn         = document.getElementById("hintBtn");
