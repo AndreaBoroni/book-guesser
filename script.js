@@ -23,7 +23,7 @@ lord of chaos
 a crown of swords
 the path of daggers
 winter's heart
-crossreads of twilight
+crossroads of twilight
 new spring
 knife of dreams
 the gathering storm
@@ -69,77 +69,77 @@ const UNLOCK_THRESHOLD = 0.6;
 const allPuzzles = {
   "i": [
     { emoji: "1️⃣9️⃣8️⃣4️⃣", answer: "1984", hint1: "1️⃣9️⃣8️⃣4️⃣", hint2: "_ _ _ _", author: "George Orwell" },
-    { emoji: "🤴💍s", answer: "the lord of the rings", hint1: "the 🤴 of the 💍s", hint2: "the _ _ _ _ of the _ _ _ _ _", author: "J. R. R. Tolkien" },
-    { emoji: "🛣️", answer: "the road", hint1: "the 🛣️", hint2: "the _ _ _ _", author: "Cormac McCarthy" },
-    { emoji: "🤏🤴", answer: "the little prince", hint1: "the 🤏 🤴", hint2: "the _ _ _ _ _ _    _ _ _ _ _ _", author: "Antoine de Saint-Exupéry" },
-    { emoji: "⚔️➕☮️", answer: "war and peace", hint1: "⚔️ and ☮️", hint2: "_ _ _ and _ _ _ _ _", author: "Leo Tolstoy" },
-    { emoji: "👴➕🌊", answer: "the old man and the sea", hint1: "the 👴 and the 🌊", hint2: "the _ _ _   _ _ _ and the _ _ _", author: "Ernest Hemingway" },
-    { emoji: "(🤏⛰️🏜️)", answer: "dune", hint1: "(🤏⛰️🏜️)", hint2: "_ _ _ _", author: "Frank Herbert" },
-    { emoji: "(🙅🍽️)(🎲🎮)s", answer: "the hunger games", hint1: "the (🙅🍽️) (🎲🎮)s", hint2: "the _ _ _ _ _ _   _ _ _ _ _", author: "Suzanne Collins" },
-    { emoji: "🟩🥚s➕🍖", answer: "green eggs and ham", hint1: "🟩 🥚s and 🍖", hint2: "_ _ _ _ _   _ _ _ _ and _ _ _", author: "Dr. Seuss" },
-    { emoji: "[💧🚢]👇", answer: "watership down", hint1: "[💧🚢] 👇", hint2: "_ _ _ _ _ _ _ _ _   _ _ _ _", author: "Richard Adams" },
+    { emoji: "🤴💍s", answer: "The Lord of the Rings", hint1: "The 🤴 of the 💍s", hint2: "The _ _ _ _ of the _ _ _ _ _", author: "J. R. R. Tolkien" },
+    { emoji: "🛣️", answer: "The Road", hint1: "The 🛣️", hint2: "The _ _ _ _", author: "Cormac McCarthy" },
+    { emoji: "🤏🤴", answer: "The Little Prince", hint1: "The 🤏 🤴", hint2: "The _ _ _ _ _ _    _ _ _ _ _ _", author: "Antoine de Saint-Exupéry" },
+    { emoji: "⚔️➕☮️", answer: "War and Peace", hint1: "⚔️ and ☮️", hint2: "_ _ _ and _ _ _ _ _", author: "Leo Tolstoy" },
+    { emoji: "👴➕🌊", answer: "The Old Man and the Sea", hint1: "The 👴 and the 🌊", hint2: "The _ _ _   _ _ _ and the _ _ _", author: "Ernest Hemingway" },
+    { emoji: "(🤏⛰️🏜️)", answer: "Dune", hint1: "(🤏⛰️🏜️)", hint2: "_ _ _ _", author: "Frank Herbert" },
+    { emoji: "(🙅🍽️)(🎲🎮)s", answer: "The Hunger Games", hint1: "The (🙅🍽️) (🎲🎮)s", hint2: "The _ _ _ _ _ _   _ _ _ _ _", author: "Suzanne Collins" },
+    { emoji: "🟩🥚s➕🍖", answer: "Green Eggs and Ham", hint1: "🟩 🥚s and 🍖", hint2: "_ _ _ _ _   _ _ _ _ and _ _ _", author: "Dr. Seuss" },
+    { emoji: "[💧🚢]👇", answer: "Watership Down", hint1: "[💧🚢] 👇", hint2: "_ _ _ _ _ _ _ _ _   _ _ _ _", author: "Richard Adams" },
   ],
   "ii": [
-    { emoji: "🐁s➕👨s", answer: "of mice and men", hint1: "of 🐁s and 👨s", hint2: "of _ _ _ _ and _ _ _", author: "John Steinbeck" },
-    { emoji: "👼s➕😈s", answer: "angels and demons", hint1: "👼s and 😈s", hint2: "_ _ _ _ _ _ and _ _ _ _ _ _", author: "Dan Brown" },
-    { emoji: "♾️(🤡💬😂)", answer: "infinite jest", hint1: "♾️ (🤡💬😂)", hint2: "_ _ _ _ _ _ _ _   _ _ _ _", author: "David Foster Wallace" },
-    { emoji: "(🐷🐮🐔)(🚜🌾👨‍🌾🏡)", answer: "animal farm", hint1: "(🐷🐮🐔) (🚜🌾👨‍🌾🏡)", hint2: "_ _ _ _ _ _   _ _ _ _", author: "George Orwell" },
-    { emoji: "🙋‍♂️🤖", answer: ["i robot", "i, robot"], hint1: "🙋‍♂️, 🤖", hint2: "_,  _ _ _ _ _", author: "Isaac Asimov" },
-    { emoji: "🤖s(🛌💭)⚡🐏❓", answer: "do androids dream of electric sheep?", hint1: "do 🤖s (🛌💭) of ⚡ 🐏?", hint2: "do _ _ _ _ _ _ _ _   _ _ _ _ _ of _ _ _ _ _ _ _ _   _ _ _ _ _?", author: "Philip K. Dick" },
-    { emoji: "👧🐉(⬛💧✒️💪)", answer: "the girl with with the dragon tattoo", hint1: "the 👧 with the 🐉 (⬛💧✒️💪)", hint2: "the _ _ _ _ with the _ _ _ _ _ _   _ _ _ _ _ _", author: "Stieg Larsson" },
-    { emoji: "🏙️", answer: "city", hint1: "🏙️", hint2: "_ _ _ _", author: "Clifford D. Simak" },
-    { emoji: "📜(🤏🏙️)s", answer: "paper towns", hint1: "📜 (🤏🏙️)s", hint2: "_ _ _ _ _  _ _ _ _ _", author: "John Green" },
-    { emoji: "🤏👩s", answer: "little women", hint1: "🤏 👩s", hint2: "_ _ _ _ _ _  _ _ _ _ _", author: "Louisa May Alcott" }
+    { emoji: "🐁s➕👨s", answer: "Of Mice and Men", hint1: "Of 🐁s and 👨s", hint2: "Of _ _ _ _ and _ _ _", author: "John Steinbeck" },
+    { emoji: "👼s➕😈s", answer: "Angels and Demons", hint1: "👼s and 😈s", hint2: "_ _ _ _ _ _ and _ _ _ _ _ _", author: "Dan Brown" },
+    { emoji: "♾️(🤡💬😂)", answer: "Infinite Jest", hint1: "♾️ (🤡💬😂)", hint2: "_ _ _ _ _ _ _ _   _ _ _ _", author: "David Foster Wallace" },
+    { emoji: "(🐷🐮🐔)(🚜🌾👨‍🌾🏡)", answer: "Animal Farm", hint1: "(🐷🐮🐔) (🚜🌾👨‍🌾🏡)", hint2: "_ _ _ _ _ _   _ _ _ _", author: "George Orwell" },
+    { emoji: "🙋‍♂️🤖", answer: ["I, Robot", "I Robot"], hint1: "🙋‍♂️, 🤖", hint2: "_,  _ _ _ _ _", author: "Isaac Asimov" },
+    { emoji: "🤖s(🛌💭)⚡🐏❓", answer: "Do Androids Dream of Electric Sheep?", hint1: "Do 🤖s (🛌💭) of ⚡ 🐏?", hint2: "Do _ _ _ _ _ _ _ _   _ _ _ _ _ of _ _ _ _ _ _ _ _   _ _ _ _ _?", author: "Philip K. Dick" },
+    { emoji: "👧🐉(⬛💧✒️💪)", answer: "The Girl with the Dragon Tattoo", hint1: "The 👧 with the 🐉 (⬛💧✒️💪)", hint2: "The _ _ _ _ with the _ _ _ _ _ _   _ _ _ _ _ _", author: "Stieg Larsson" },
+    { emoji: "🏙️", answer: "City", hint1: "🏙️", hint2: "_ _ _ _", author: "Clifford D. Simak" },
+    { emoji: "📜(🤏🏙️)s", answer: "Paper Towns", hint1: "📜 (🤏🏙️)s", hint2: "_ _ _ _ _  _ _ _ _ _", author: "John Green" },
+    { emoji: "🤏👩s", answer: "Little Women", hint1: "🤏 👩s", hint2: "_ _ _ _ _ _  _ _ _ _ _", author: "Louisa May Alcott" }
   ],
   "iii": [
-    { emoji: "(👋😢)💪s", answer: "a farewell to arms", hint1: "a (👋😢) to 💪s", hint2: "a _ _ _ _ _ _ _ to _ _ _ _", author: "Ernest Hemingway"},
-    { emoji: "🏰", answer: "the castle", hint1: "the 🏰", hint2: "the _ _ _ _ _ _", author: "Franz Kafka" },
-    { emoji: "🎣2️⃣2️⃣", answer: ["catch-22", "catch 22"], hint1: "🎣-2️⃣2️⃣", hint2: "_ _ _ _ _ - _ _", author: "Joseph Heller" },
-    { emoji: "🥇🧭", answer: "the golden compass", hint1: "the 🥇 🧭", hint2: "the _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Philip Pullman" },
-    { emoji: "👧🔛🚅", answer: "the girl on the train", hint1: "the 👧 on the 🚅", hint2: "the   _ _ _ _ on the _ _ _ _ _", author: "Paula Hawkins" },
-    { emoji: "(💎💰🎁)(🌊🏝️🌊)", answer: "treasure island", hint1: "(💎💰🎁) (🌊🏝️🌊)", hint2: "_ _ _ _ _ _ _ _   _ _ _ _ _ _", author: "Robert Louis Stevenson" },
-    { emoji: "🤴🦟s", answer: "lord of the flies", hint1: "🤴 of the 🦟s", hint2: "_ _ _ _ of the _ _ _ _ _", author: "William Golding" },
-    { emoji: "🪁🏃", answer: "the kite runner", hint1: "the 🪁 🏃", hint2: "the _ _ _ _   _ _ _ _ _ _", author: "Khaled Hosseini" },
-    { emoji: "5️⃣0️⃣🕶️(⬜↔️⬛)", answer: ["fifty shades of gray", "50 shades of gray"], hint1: "5️⃣0️⃣ 🕶️ of (⬜↔️⬛)", hint2: "_ _ _ _ _   _ _ _ _ _ _ of _ _ _ _", author: "E. L. James" },
-    { emoji: "(👨👍🚘)📋🌌", answer: "the hitchhiker's guide to the galaxy", hint1: "the (👨👍🚘)'s 📋 to the 🌌", hint2: "the _ _ _ _ _ _ _ _ _ _'s _ _ _ _ _ to the _ _ _ _ _ _", author: "Douglas Adams"  }
+    { emoji: "(👋😢)💪s", answer: "A Farewell to Arms", hint1: "A (👋😢) to 💪s", hint2: "A _ _ _ _ _ _ _ _ to _ _ _ _", author: "Ernest Hemingway"},
+    { emoji: "🏰", answer: "The Castle", hint1: "The 🏰", hint2: "The _ _ _ _ _ _", author: "Franz Kafka" },
+    { emoji: "🎣2️⃣2️⃣", answer: ["Catch-22", "Catch 22"], hint1: "🎣-2️⃣2️⃣", hint2: "_ _ _ _ _ - _ _", author: "Joseph Heller" },
+    { emoji: "🥇🧭", answer: "The Golden Compass", hint1: "The 🥇 🧭", hint2: "The _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Philip Pullman" },
+    { emoji: "👧🔛🚅", answer: "The Girl on the Train", hint1: "The 👧 on the 🚅", hint2: "The   _ _ _ _ on the _ _ _ _ _", author: "Paula Hawkins" },
+    { emoji: "(💎💰🎁)(🌊🏝️🌊)", answer: "Treasure Island", hint1: "(💎💰🎁) (🌊🏝️🌊)", hint2: "_ _ _ _ _ _ _ _   _ _ _ _ _ _", author: "Robert Louis Stevenson" },
+    { emoji: "🤴🦟s", answer: "Lord of the Flies", hint1: "🤴 of the 🦟s", hint2: "_ _ _ _ of the _ _ _ _ _", author: "William Golding" },
+    { emoji: "🪁🏃", answer: "The Kite Runner", hint1: "The 🪁 🏃", hint2: "The _ _ _ _   _ _ _ _ _ _", author: "Khaled Hosseini" },
+    { emoji: "5️⃣0️⃣🕶️(⬜↔️⬛)", answer: ["Fifty Shades of Gray", "50 Shades of Gray"], hint1: "5️⃣0️⃣ 🕶️ of (⬜↔️⬛)", hint2: "_ _ _ _ _   _ _ _ _ _ _ of _ _ _ _", author: "E. L. James" },
+    { emoji: "(👨👍🚘🧗‍♂️)📋🌌", answer: "The Hitchhiker's Guide to the Galaxy", hint1: "The (👨👍🚘🧗‍♂️)'s 📋 to the 🌌", hint2: "The _ _ _ _ _ _ _ _ _ _'s _ _ _ _ _ to the _ _ _ _ _ _", author: "Douglas Adams"  }
   ],
   "iv": [
-    { emoji: "🍇🤬", answer: "the grapes of wrath", hint1: "the 🍇 of 🤬", hint2: "the _ _ _ _ _ _ of _ _ _ _ _", author: "John Steinbeck" },
-    { emoji: "🌃(📚🏠)", answer: "the midnight library", hint1: "the 🌃 (📚🏠)", hint2: "the _ _ _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Matt Haig" },
-    { emoji: "[🕓(💼🛠️👨‍💻)]🍊", answer: "a clockwork orange", hint1: "a [🕓(💼🛠️👨‍💻)] 🍊", hint2: "a _ _ _ _ _ _ _ _ _   _ _ _ _ _ _", author: "Anthony Burgess" },
-    { emoji: "[(🐄🔪🥩)🏠]5️⃣", answer: ["slaughterhouse-five", "slaughter-house 5", "slaughterhouse-5"], hint1: "[(🐄🔪🥩)🏠]-5️⃣", hint2: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ - _ _ _ _", author: "Kurt Vonnegut" },
-    { emoji: "[(✒️⚫💧)❤️]", answer: "inkheart", hint1: "[(✒️⚫💧)❤️]", hint2: "_ _ _ _ _ _ _ _", author: "Cornelia Funke" },
-    { emoji: "(💻👨‍💻🌐)", answer: "it", hint1: "(💻👨‍💻🌐)", hint2: "_ _", author: "Stephen King" },
-    { emoji: "[⛲🙂]", answer: "the fountainhead", hint1: "the [⛲🙂]", hint2: "the _ _ _ _ _ _ _ _ _ _ _ _", author: "Ayn Rand" },
-    { emoji: "👧(🦪⚪)[👂💍]", answer: "girl with a pearl earring", hint1: "👧 with a (🦪⚪) [👂💍]", hint2: "_ _ _ _ with a _ _ _ _ _   _ _ _ _ _ _ _", author: "Tracy Chevalier" },
-    { emoji: "[🟨🙂]", answer: "yellowface", hint1: "[🟨🙂]", hint2: " _ _ _ _ _ _ _ _ _ _", author: "R. F. Kuang" },
-    { emoji: "👸👰", answer: "the princess bride", hint1: "the 👸 👰", hint2: "the _ _ _ _ _ _ _ _   _ _ _ _ _", author: "William Goldman"  }
+    { emoji: "🍇🤬", answer: "The Grapes of Wrath", hint1: "The 🍇 of 🤬", hint2: "The _ _ _ _ _ _ of _ _ _ _ _", author: "John Steinbeck" },
+    { emoji: "🌃(📚🏠)", answer: "The Midnight Library", hint1: "The 🌃 (📚🏠)", hint2: "The _ _ _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Matt Haig" },
+    { emoji: "[🕓(💼🛠️👨‍💻)]🍊", answer: "A Clockwork Orange", hint1: "A [🕓(💼🛠️👨‍💻)] 🍊", hint2: "A _ _ _ _ _ _ _ _ _   _ _ _ _ _ _", author: "Anthony Burgess" },
+    { emoji: "[(🐄🔪🥩)🏠]5️⃣", answer: ["Slaughterhouse-five", "Slaughter-house 5", "Slaughterhouse-5"], hint1: "[(🐄🔪🥩)🏠]-5️⃣", hint2: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ - _ _ _ _", author: "Kurt Vonnegut" },
+    { emoji: "[(✒️⚫💧)❤️]", answer: "Inkheart", hint1: "[(✒️⚫💧)❤️]", hint2: "_ _ _ _ _ _ _ _", author: "Cornelia Funke" },
+    { emoji: "(💻👨‍💻🌐)", answer: "It", hint1: "(💻👨‍💻🌐)", hint2: "_ _", author: "Stephen King" },
+    { emoji: "[⛲🙂]", answer: "The Fountainhead", hint1: "The [⛲🙂]", hint2: "The _ _ _ _ _ _ _ _ _ _ _ _", author: "Ayn Rand" },
+    { emoji: "👧(🦪⚪)[👂💍]", answer: "Girl with a Pearl Earring", hint1: "👧 with a (🦪⚪) [👂💍]", hint2: "_ _ _ _ with a _ _ _ _ _   _ _ _ _ _ _ _", author: "Tracy Chevalier" },
+    { emoji: "[🟨🙂]", answer: "Yellowface", hint1: "[🟨🙂]", hint2: " _ _ _ _ _ _ _ _ _ _", author: "R. F. Kuang" },
+    { emoji: "👸👰", answer: "The Princess Bride", hint1: "The 👸 👰", hint2: "The _ _ _ _ _ _ _ _   _ _ _ _ _", author: "William Goldman"  }
   ],
   "v": [
-    { emoji: "🐱➡️🎩", answer: "the cat in the hat", hint1: "the 🐱 in the 🎩", hint2: "the _ _ _ in the _ _ _", author: "Dr. Seuss" },
-    { emoji: "(👨🎲🎮)(🎲🎮)s", answer: "the player of games", hint1: "the (👨🎲🎮) of (🎲🎮)s", hint2: "the _ _ _ _ _ _ of _ _ _ _ _", author: "Iain M. Banks" },
-    { emoji: "1️⃣0️⃣0️⃣0️⃣✨☀️s", answer: ["a thousand splendid suns", "1000 splendid suns"]  , hint1: "a 1️⃣0️⃣0️⃣0️⃣ ✨ ☀️s", hint2: "a _ _ _ _ _ _ _ _   _ _ _ _ _ _ _ _   _ _ _ _", author: "Khaled Hosseini" },
-    { emoji: "1️⃣(✈️🦅🪂)⬆️🐦(🐦🏡)", answer: "one flew over the cuckoo's nest", hint1: "1️⃣ (✈️🦅🪂) over the 🐦's (🐦🏡)", hint2: "_ _ _   _ _ _ _ over the _ _ _ _ _ _'s _ _ _ _", author: "Ken Kesey" },
-    { emoji: "➡️🥶🩸", answer: "in cold blood", hint1: "in 🥶 🩸", hint2: "in _ _ _ _   _ _ _ _ _", author: "Truman Capote" },
-    { emoji: "🐱(👶🛌🏻)", answer: "cat's cradle", hint1: "🐱's (👶🛌🏻)", hint2: "_ _ _'s _ _ _ _ _ _", author: "Kurt Vonnegut" },
-    { emoji: "[🩸🎵]", answer: "bloodmusic", hint1: "[🩸🎵]", hint2: "_ _ _ _ _ _ _ _ _ _", author: "Greg Bear" },
-    { emoji: "🤫(🤕🏥)", answer: "the silent patient", hint1: "the 🤫 (🤕🏥)", hint2: "the _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Alex Michaelides" },
-    { emoji: "(🌍🧲🍎)🌈", answer: "gravity's rainbow", hint1: "(🌍🧲🍎)'s 🌈", hint2: "_ _ _ _ _ _ _'s _ _ _ _ _ _ _", author: "Thomas Pynchon" },
-    { emoji: "🏙️🦴", answer: "city of bones", hint1: "🏙️ of 🦴s", hint2: "_ _ _ _ of _ _ _ _ _", author: "Cassandra Clare"  }
+    { emoji: "🐱➡️🎩", answer: "The Cat in the Hat", hint1: "The 🐱 in the 🎩", hint2: "The _ _ _ in the _ _ _", author: "Dr. Seuss" },
+    { emoji: "(👨🎲🎮)(🎲🎮)s", answer: "The Player of Games", hint1: "The (👨🎲🎮) of (🎲🎮)s", hint2: "The _ _ _ _ _ _ of _ _ _ _ _", author: "Iain M. Banks" },
+    { emoji: "1️⃣0️⃣0️⃣0️⃣✨☀️s", answer: ["A Thousand Splendid Suns", "1000 Splendid Suns"]  , hint1: "A 1️⃣0️⃣0️⃣0️⃣ ✨ ☀️s", hint2: "A _ _ _ _ _ _ _ _   _ _ _ _ _ _ _ _   _ _ _ _", author: "Khaled Hosseini" },
+    { emoji: "1️⃣(✈️🦅🪂)⬆️🐦(🐦🏡)", answer: "One Flew over the Cuckoo's Nest", hint1: "1️⃣ (✈️🦅🪂) over the 🐦's (🐦🏡)", hint2: "_ _ _   _ _ _ _ over the _ _ _ _ _ _'s _ _ _ _", author: "Ken Kesey" },
+    { emoji: "➡️🥶🩸", answer: "In Cold Blood", hint1: "In 🥶 🩸", hint2: "In _ _ _ _   _ _ _ _ _", author: "Truman Capote" },
+    { emoji: "🐱(👶🛌🏻)", answer: "Cat's Cradle", hint1: "🐱's (👶🛌🏻)", hint2: "_ _ _'s _ _ _ _ _ _", author: "Kurt Vonnegut" },
+    { emoji: "[🩸🎵]", answer: "Bloodmusic", hint1: "[🩸🎵]", hint2: "_ _ _ _ _ _ _ _ _ _", author: "Greg Bear" },
+    { emoji: "🤫(🤕🏥)", answer: "The Silent Patient", hint1: "The 🤫 (🤕🏥)", hint2: "The _ _ _ _ _ _   _ _ _ _ _ _ _", author: "Alex Michaelides" },
+    { emoji: "(🌍🧲🍎)🌈", answer: "Gravity's Rainbow", hint1: "(🌍🧲🍎)'s 🌈", hint2: "_ _ _ _ _ _ _'s _ _ _ _ _ _ _", author: "Thomas Pynchon" },
+    { emoji: "🏙️🦴", answer: "City of Bones", hint1: "🏙️ of 🦴s", hint2: "_ _ _ _ of _ _ _ _ _", author: "Cassandra Clare"  }
   ],
   "vi": [
-    { emoji: "✨", answer: "the shining", hint1: "the ✨", hint2: "the _ _ _ _ _ _ _", author: "Stephen King" },
-    { emoji: "⏳(👨🧳)👰", answer: "the time traveler's wife", hint1: "the ⏳ (👨🧳)'s 👰", hint2: "the _ _ _ _   _ _ _ _ _ _ _ _'s _ _ _ _", author: "Audrey Niffenegger" },
-    { emoji: "(👨🔩➡️🥇)", answer: "the alchemist", hint1: "the (👨🔩➡️🥇)", hint2: "the _ _ _ _ _ _ _ _ _", author: "Paulo Coelho" },
-    { emoji: "🦊➡️🧦", answer: "fox in socks", hint1: "🦊 in 🧦", hint2: "_ _ _ in _ _ _ _ _", author: "Dr. Seuss" },
-    { emoji: "❄️(🚗💥🚗)", answer: "snow crash", hint1: "❄️ (🚗💥🚗)", hint2: "_ _ _ _   _ _ _ _ _", author: "Neal Stephenson" },
-    { emoji: "🌍🤷‍♀️", answer: "atlas shrugged", hint1: "🌍 🤷‍♀️", hint2: "_ _ _ _ _   _ _ _ _ _ _ _ _", author: "Ayn Rand" },
-    { emoji: "1️⃣🐟2️⃣🐟🟥🐟🟦🐟", answer: "one fish two fish red fish blue fish", hint1: "1️⃣ 🐟 2️⃣ 🐟 🟥 🐟 🟦 🐟", hint2: "_ _ _   _ _ _ _   _ _ _   _ _ _ _   _ _ _   _ _ _ _   _ _ _ _   _ _ _ _", author: "Dr. Seuss" },
-    { emoji: "🎨🟪", answer: "the color purple", hint1: "the 🎨 🟪", hint2: "the _ _ _ _ _   _ _ _ _ _ _", author: "Alice Walker" },
-    { emoji: "🚶2️⃣🌙s", answer: "walk two moons", hint1: "🚶 2️⃣ 🌙s", hint2: "_ _ _ _   _ _ _   _ _ _ _ _", author: "Sharon Creech"  }
+    { emoji: "✨", answer: "The Shining", hint1: "The ✨", hint2: "The _ _ _ _ _ _ _", author: "Stephen King" },
+    { emoji: "⏳(👨🧳)👰", answer: "The Time Traveler's Wife", hint1: "The ⏳ (👨🧳)'s 👰", hint2: "The _ _ _ _   _ _ _ _ _ _ _ _'s _ _ _ _", author: "Audrey Niffenegger" },
+    { emoji: "(👨🔩➡️🥇)", answer: "The Alchemist", hint1: "The (👨🔩➡️🥇)", hint2: "The _ _ _ _ _ _ _ _ _", author: "Paulo Coelho" },
+    { emoji: "🦊➡️🧦", answer: "Fox in Socks", hint1: "🦊 in 🧦", hint2: "_ _ _ in _ _ _ _ _", author: "Dr. Seuss" },
+    { emoji: "❄️(🚗💥🚗)", answer: "Snow Crash", hint1: "❄️ (🚗💥🚗)", hint2: "_ _ _ _   _ _ _ _ _", author: "Neal Stephenson" },
+    { emoji: "🌍🤷‍♀️", answer: "Atlas Shrugged", hint1: "🌍 🤷‍♀️", hint2: "_ _ _ _ _   _ _ _ _ _ _ _ _", author: "Ayn Rand" },
+    { emoji: "1️⃣🐟2️⃣🐟🟥🐟🟦🐟", answer: "One Fish Two Fish Red Fish Blue Fish", hint1: "1️⃣ 🐟 2️⃣ 🐟 🟥 🐟 🟦 🐟", hint2: "_ _ _   _ _ _ _   _ _ _   _ _ _ _   _ _ _   _ _ _ _   _ _ _ _   _ _ _ _", author: "Dr. Seuss" },
+    { emoji: "🎨🟪", answer: "The Color Purple", hint1: "The 🎨 🟪", hint2: "The _ _ _ _ _   _ _ _ _ _ _", author: "Alice Walker" },
+    { emoji: "🚶2️⃣🌙s", answer: "Walk Two Moons", hint1: "🚶 2️⃣ 🌙s", hint2: "_ _ _ _   _ _ _   _ _ _ _ _", author: "Sharon Creech"  }
   ],
   // "vii": [
-    // { emoji: "(1️⃣⏳)➕(🔜⏳)🤴", answer: "the once and future king", hint1: "", hint2: "", author: "" },
+    // { emoji: "(1️⃣⏳)➕(🔜⏳)🤴", answer: "The once and future king", hint1: "", hint2: "", author: "" },
   // ],
   // "viii": [
   // ],
@@ -147,26 +147,31 @@ const allPuzzles = {
   // ],
   // "x": [
   // ],
-  "acotar": [
-    { emoji: "(👩🏻‍⚖️⚖️🏛️)(🌵🥀)s➕🌹s", answer: "a court of thorns and roses", hint1: "", hint2: "", author: "" },
-    { emoji: "(👩🏻‍⚖️⚖️🏛️)🌫️➕😡", answer: "a court of mist and fury", hint1: "", hint2: "", author: "" },
-    { emoji: "(👩🏻‍⚖️⚖️🏛️)(🕊️💪)s➕🏚️", answer: "a court of wings and ruin", hint1: "", hint2: "", author: "" },
-    { emoji: "(👩🏻‍⚖️⚖️🏛️)🥶➕(⭐💡)", answer: "a court of frost and starlight", hint1: "", hint2: "", author: "" },
-    { emoji: "(👩🏻‍⚖️⚖️🏛️)🥈🔥s", answer: "a court of silver flames", hint1: "", hint2: "", author: "" },
+  "series i": [
+    { emoji: "(👩🏻‍⚖️⚖️🏛️)(🌵🥀)s➕🌹s", answer: "A Court of Thorns and Roses", hint1: "A (👩🏻‍⚖️⚖️🏛️) of (🌵🥀)s and 🌹s", hint2: "A _ _ _ _ _ of _ _ _ _ _ _ and _ _ _ _ _", author: "Sarah J. Maas" },
+    { emoji: "(👩🏻‍⚖️⚖️🏛️)🌫️➕😡", answer: "A Court of Mist and Fury", hint1: "A (👩🏻‍⚖️⚖️🏛️) of 🌫️ and 😡", hint2: "A _ _ _ _ _ of _ _ _ _ and _ _ _ _", author: "Sarah J. Maas" },
+    { emoji: "(👩🏻‍⚖️⚖️🏛️)(🕊️💪)s➕🏚️", answer: "A Court of Wings and Ruin", hint1: "A (👩🏻‍⚖️⚖️🏛️) of (🕊️💪)s and 🏚️", hint2: "A _ _ _ _ _ of _ _ _ _ _ and _ _ _ _", author: "Sarah J. Maas" },
+    { emoji: "(👩🏻‍⚖️⚖️🏛️)🥶➕[⭐💡]", answer: "A Court of Frost and Starlight", hint1: "A (👩🏻‍⚖️⚖️🏛️) of 🥶 and [⭐💡]", hint2: "A _ _ _ _ _ of _ _ _ _ _ and _ _ _ _ _ _ _ _ _", author: "Sarah J. Maas" },
+    { emoji: "(👩🏻‍⚖️⚖️🏛️)🥈🔥s", answer: "A Court of Silver Flames", hint1: "A (👩🏻‍⚖️⚖️🏛️) of 🥈 🔥s", hint2: "A _ _ _ _ _ of _ _ _ _ _ _   _ _ _ _ _ _", author: "Sarah J. Maas" }
   ],
-  "asoiaf": [
-    { emoji: "(♫♪♫)🧊➕🔥", answer: "a song of ice and fire", hint1: "", hint2: "", author: "" },
-    { emoji: "(🎲🎮)(👑🪑)s", answer: "a game of thrones", hint1: "", hint2: "", author: "" },
-    { emoji: "(🗡️💥🗡️)🤴s", answer: "a clash of kings", hint1: "", hint2: "", author: "" },
-    { emoji: "🌪️⚔️", answer: "a storm of swords", hint1: "", hint2: "", author: "" },
-    { emoji: "(🍽️🎉🥂)(🐦‍⬛)", answer: "a feast for crows", hint1: "", hint2: "", author: "" },
-    { emoji: "(💃🏻🕺🏽)🐉s", answer: "a dance with dragons", hint1: "", hint2: "", author: "" },
-  ]
+  "series ii": [
+    { emoji: "(♫♪♫)🧊➕🔥", answer: "A Song of Ice and Fire", hint1: "A 🎵 of 🧊 and 🔥", hint2: "A _ _ _ _ of _ _ _ and _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "(🎲🎮)(👑🪑)s", answer: "A Game of Thrones", hint1: "A (🎲🎮) of (👑🪑)s", hint2: "A _ _ _ _ of _ _ _ _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "(🗡️💥🗡️)🤴s", answer: "A Clash of Kings", hint1: "A 🗡️ of 🤴s", hint2: "A _ _ _ _ _ of _ _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "🌪️⚔️", answer: "A Storm of Swords", hint1: "A 🌪️ of ⚔️s", hint2: "A _ _ _ _ _ of _ _ _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "(🍽️🎉🥂)(🐦‍⬛)s", answer: "A Feast for Crows", hint1: "A (🍽️🎉🥂) for (🐦‍⬛)s", hint2: "A _ _ _ _ _ for _ _ _ _ _", author: "George R. R. Martin" },
+    { emoji: "(💃🏻🕺🏽)🐉s", answer: "A Dance with Dragons", hint1: "A (💃🏻🕺🏽) with 🐉s", hint2: "A _ _ _ _ _ with _ _ _ _ _ _ _", author: "George R. R. Martin" }
+  ],
 };
 
 const unlockThresholds = {
-  "acotar": 20,
-  "asoiaf": 30,
+  "series i": 20,
+  "series ii": 30,
+};
+
+const specialNames = {
+  "series i": "Series I",
+  "series ii": "Series II",
 };
 
 let currentGroup = "i"; // default group
@@ -201,28 +206,36 @@ function isGroupSolved(groupKey) {
 }
 
 function startGame() {
-  puzzles = allPuzzles[currentGroup];
+  const groupKeys = Object.keys(allPuzzles);
+  let groupIndex = groupKeys.indexOf(currentGroup);
 
-  // Find first unsolved puzzle by normalized answer
-  let firstUnsolvedIndex = 0;
-  for (let i = 0; i < puzzles.length; i++) {
-    const normalized = normalizeAnswer(puzzles[i].answer);
-    if (!solved[normalized]) {
-      firstUnsolvedIndex = i;
+  // Loop until we find a group with an unsolved puzzle or exhaust all groups
+  while (groupIndex < groupKeys.length) {
+    const group = groupKeys[groupIndex];
+    const puzzles = allPuzzles[group];
+
+    let firstUnsolvedIndex = -1;
+    for (let i = 0; i < puzzles.length; i++) {
+      const normalized = normalizeAnswer(puzzles[i].answer);
+      if (!solved[normalized]) {
+        firstUnsolvedIndex = i;
+        break;
+      }
+    }
+
+    if (firstUnsolvedIndex !== -1) {
+      currentGroup = group;
+      currentPuzzle = firstUnsolvedIndex;
       break;
     }
-    // If all are solved, default to first
-    if (i === puzzles.length - 1) {
-      firstUnsolvedIndex = 0;
-    }
+
+    groupIndex++;
   }
 
-  
-  currentPuzzle = firstUnsolvedIndex;
   loadPuzzle(false);
   updateProgress();
+  renderGroupButtons();
 }
-
   
   function levenshteinDistance(a, b) {
     const matrix = [];
@@ -264,9 +277,7 @@ function startGame() {
         area.classList.add('solved');
       }
     }
-    
-    updateButtons();
-  }  
+  }
   
   function updatePuzzleHTML() {
     const puzzle = allPuzzles[currentGroup][currentPuzzle];
@@ -294,6 +305,8 @@ function startGame() {
     const resetHintBtn = document.getElementById("resetHintBtn");
     hintBtn.disabled      = !shouldEnableHintButton(puzzle, hintLevel);
     resetHintBtn.disabled = !shouldEnableResetHintButton(puzzle, hintLevel);
+    
+    updateHintTooltip();
   }
 
   function shouldEnableHintButton(puzzle, currentHintLevel) {
@@ -337,10 +350,34 @@ function startGame() {
       puzzleBox.classList.add('solved');
   
       setTimeout(() => {
-        if (currentPuzzle < allPuzzles[currentGroup].length - 1) {
-          currentPuzzle++;
+        const puzzles = allPuzzles[currentGroup];
+        const length = puzzles.length;
+
+        let nextUnsolved = -1;
+        for (let i = currentPuzzle + 1; i < length; i++) {
+          const normalized = normalizeAnswer(puzzles[i].answer);
+          if (!solved[normalized]) {
+            nextUnsolved = i;
+            break;
+          }
         }
+
+        // If no unsolved puzzle is found after current, search from beginning
+        if (nextUnsolved === -1) {
+          for (let i = 0; i <= currentPuzzle; i++) {
+            const normalized = normalizeAnswer(puzzles[i].answer);
+            if (!solved[normalized]) {
+              nextUnsolved = i;
+              break;
+            }
+          }
+        }
+
+        // Fallback to current if all are solved
+        currentPuzzle = nextUnsolved !== -1 ? nextUnsolved : currentPuzzle;
+
         loadPuzzle(true);
+
         setTimeout(() => {
           const nextInput = document.getElementById('userInput');
           if (nextInput && !nextInput.disabled) {
@@ -348,22 +385,20 @@ function startGame() {
           }
         }, 100);
       }, 300);
+
     }
   }
   
-  
   function prevPuzzle() {
-    if (currentPuzzle > 0) {
-      currentPuzzle--;
-      loadPuzzle(true);
-    }
+    const puzzles = allPuzzles[currentGroup];
+    currentPuzzle = (currentPuzzle-1 + puzzles.length) % puzzles.length;
+    loadPuzzle(true);
   }
   
   function nextPuzzle() {
-    if (currentPuzzle < puzzles.length - 1) {
-      currentPuzzle++;
-      loadPuzzle(true);
-    }
+    const puzzles = allPuzzles[currentGroup];
+    currentPuzzle = (currentPuzzle+1 + puzzles.length) % puzzles.length;
+    loadPuzzle(true);
   }
 
   function updateProgress() {
@@ -404,11 +439,6 @@ function startGame() {
     }
   }
   
-  function updateButtons() {
-    document.getElementById('prevBtn').disabled = (currentPuzzle === 0);
-    document.getElementById('nextBtn').disabled = (currentPuzzle === allPuzzles[currentGroup].length - 1);
-  }
-
   function unlockAll() {
     const groupButtons = document.querySelectorAll('.group-button');
   
@@ -449,10 +479,6 @@ function startGame() {
     const firstGroupButton = document.querySelector('.group-button[data-group="i"]');
     if (firstGroupButton) firstGroupButton.classList.add('active');
   
-    // Recalculate puzzles and go to first unsolved
-    const unsolvedIndex = allPuzzles[currentGroup].findIndex(p => !solved[normalizeAnswer(p.answer)]);
-    currentPuzzle = unsolvedIndex === -1 ? 0 : unsolvedIndex;
-  
     renderGroupButtons();
     startGame();
     updateProgress();
@@ -485,7 +511,7 @@ function startGame() {
     container.appendChild(separator);
 
     regularGroups.forEach((group, index) => {
-      container.appendChild(createGroupButton(group, groupKeys, unlockThresholds, index));
+      container.appendChild(createGroupButton(group, groupKeys, index));
     });
   
     // Add separator and label
@@ -496,17 +522,21 @@ function startGame() {
       container.appendChild(separator);
   
       specialGroups.forEach(group => {
-        container.appendChild(createGroupButton(group, groupKeys, unlockThresholds));
+        container.appendChild(createGroupButton(group, groupKeys));
       });
     }
   }
   
-  function createGroupButton(group, groupKeys, unlockThresholds, index = 0) {
+  function createGroupButton(group, groupKeys, index = 0) {
     const wrapper = document.createElement("div");
     wrapper.className = "group-button-wrapper";
   
     const btn = document.createElement("button");
-    btn.textContent = `Group ${group.toUpperCase()}`;
+    if (specialNames[group]) {
+      btn.textContent = specialNames[group];
+    } else {
+      btn.textContent = `Group ${group.toUpperCase()}`;
+    }
     btn.dataset.group = group;
     btn.classList.add("group-button");
   
@@ -658,6 +688,26 @@ function resetHints() {
     setHintLevel(allPuzzles[currentGroup][currentPuzzle].answer, 0);
     updatePuzzleHTML();
 }
+function updateHintTooltip() {
+  const tooltip = document.getElementById("hintTooltip");
+  const puzzle = allPuzzles[currentGroup][currentPuzzle];
+  const hintLevel = getHintLevel(puzzle.answer);
+
+  if (isSolved(puzzle.answer)) {
+    tooltip.textContent = "Puzzle solved";
+  } else if (hintLevel === 0 && puzzle.hint1) {
+    tooltip.textContent = "Reveal in-between words";
+  } else if (hintLevel === 1 && puzzle.hint2) {
+    tooltip.textContent = "Reveal word lengths";
+  } else if (hintLevel === 2 && puzzle.author) {
+    tooltip.textContent = "Reveal the author";
+  } else if (puzzle.hint1) {
+    tooltip.textContent = "No more hints available";
+  } else {
+    tooltip.textContent = "No hints available";
+  }
+}
+
 
   
 startGame();

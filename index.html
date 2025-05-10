@@ -18,10 +18,9 @@
           <ul>
             <li><strong>'( )'</strong> Emojis inside parentheses form a conceptual or symbolic word when combined (e.g. (🤏🐎) -> Little + Horse = Pony</li>
             <li><strong>'[ ]'</strong> Emojis inside brackets form a literal compound word (e.g. [🌞🌻] -> Sun + Flower = Sunflower</li>
-            <li>Parentheses and brackets can be combined</li>
             <li><strong>'s'</strong> means plural (e.g., 🐶s = dogs)</li>
             <li>Emojis represent only the <strong>title</strong> and not the plot/author/characters</li>
-            <li>You may not know all the books, a little help from Google is allowed 😉</li>
+            <li>Use the <strong>💡 hints</strong> if you are stuck</li>
           </ul>
         </div>
       </div>
@@ -57,7 +56,10 @@
       </div>
     </div>
     <div class="button-group">
-      <button id="hintBtn" onclick="addHint()">💡 Hint</button>
+      <div class="tooltip-wrapper">
+        <button id="hintBtn" onclick="addHint()">💡 Hint</button>
+        <div id="hintTooltip" class="tooltip-box">Reveal a hint</div>
+      </div>
       <button id="resetHintBtn" onclick="resetHints()">🔄 Reset Hints</button>
       <button id="revealAnswerBtn" onclick="revealAnswer()">🕵️ Reveal Answer</button>
       <br>
