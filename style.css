@@ -385,7 +385,6 @@ body::before {
   
     flex-shrink: 0;   /* do not shrink */
     flex-grow: 0;     /* do not grow */
-    width: 220px;     /* fixed width for consistency */
     box-sizing: border-box;
   }  
   
@@ -450,6 +449,22 @@ body::before {
     z-index: 1;
   }    
   
+/* Hide toggle button on desktop */
+#mobileMenuToggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  background: #5dade2;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
   /* Mobile Layout */
 @media (max-width: 768px) {
   .app-container {
@@ -500,25 +515,7 @@ body::before {
   .overlay {
     display: block;
   }
-}
-/* Hide toggle button on desktop */
-#mobileMenuToggle {
-  display: none;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1001;
-  background: #5dade2;
-  color: white;
-  font-size: 1.5em;
-  padding: 10px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
-/* Show toggle button on mobile */
-@media (max-width: 768px) {
   #mobileMenuToggle {
     display: block;
   }
@@ -542,5 +539,28 @@ body::before {
 
   .overlay {
     display: block;
+  }
+  
+  .emoji {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .emoji-hints {
+    white-space: pre;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .text-hints {
+    white-space: pre;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .solved-answer {
+    font-size: 15px;
+  }
+
+  .button-group button {
+    padding: 5px 10px; 
   }
 }

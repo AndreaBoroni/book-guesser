@@ -294,35 +294,27 @@ function startGame() {
     return matrix[b.length][a.length];
   }
 
-  function loadPuzzle(animated = false) {
+  function loadPuzzle() {
     const area = document.getElementById('puzzleArea');
   
     // Always remove 'solved' class before rendering a new puzzle
     area.classList.remove('solved');
     const puzzle_solved = isSolved(allPuzzles[currentGroup][currentPuzzle].answer);
   
-    if (animated) {
-      area.classList.add('hide');
-      setTimeout(() => {
-        updatePuzzleHTML();
-        area.classList.remove('hide');
-  
-        if (puzzle_solved) {
-          area.classList.add('solved');
-        }
-      }, 100);
-    } else {
+    area.classList.add('hide');
+    setTimeout(() => {
       updatePuzzleHTML();
-  
+      area.classList.remove('hide');
+
       if (puzzle_solved) {
         area.classList.add('solved');
       }
-    }
+    }, 100);
 
     updateProgress();
   }
   
-  function updatePuzzleHTML() {
+  function updatePuzzleHTML(preserve_text=false) {
     const puzzle = allPuzzles[currentGroup][currentPuzzle];
     const isSpecialGroup = !!unlockThresholds[currentGroup];
     const isFirst = currentPuzzle === 0;
@@ -353,18 +345,16 @@ function startGame() {
 
     // Save user input before DOM update
     let savedInput = "";
-    const existingInput = document.getElementById("userInput");
-    if (existingInput) {
-      savedInput = existingInput.value;
+    if (preserve_text) {
+      const existingInput = document.getElementById("userInput");
+      if (existingInput) savedInput = existingInput.value;
     }
 
     area.innerHTML = content;
 
     // Restore input after re-render
     const newInput = document.getElementById("userInput");
-    if (newInput) {
-      newInput.value = savedInput;
-    }
+    if (newInput) newInput.value = savedInput;
 
     const hintLevel = getHintLevel(puzzle.answer);
     
@@ -448,7 +438,7 @@ function startGame() {
         // Fallback to current if all are solved
         currentPuzzle = nextUnsolved !== -1 ? nextUnsolved : currentPuzzle;
 
-        loadPuzzle(true);
+        loadPuzzle();
 
         setTimeout(() => {
           const nextInput = document.getElementById('userInput');
@@ -468,7 +458,7 @@ function startGame() {
     if (isSpecialGroup && !firstPuzzleSolved) return;
   
     currentPuzzle = (currentPuzzle + puzzles.length + 1) % puzzles.length;
-    loadPuzzle(true);
+    loadPuzzle();
   }
   
   function prevPuzzle() {
@@ -479,9 +469,8 @@ function startGame() {
     if (isSpecialGroup && !firstPuzzleSolved) return;
 
     currentPuzzle = (currentPuzzle + puzzles.length - 1) % puzzles.length;
-    loadPuzzle(true);
+    loadPuzzle();
   }
-  
 
   function updateProgress() {
     const container = document.getElementById('progressBoxes');
@@ -504,7 +493,7 @@ function startGame() {
     for (let i = 0; i < puzzles.length; i++) {
       const box = document.createElement('div');
       box.classList.add('progress-box');
-      if (solved[normalizeAnswer(puzzles[i].answer)]) box.classList.add('solved');
+      if (isSolved(puzzles[i].answer)) box.classList.add('solved');
       if (i === currentPuzzle) box.classList.add('current');
     
       container.appendChild(box);
@@ -711,28 +700,6 @@ function startGame() {
     renderGroupButtons(); // refresh unlocks
   }
 
-  // function loadGroup(group) {
-  //   currentGroup = group;
-  
-  //   // Find first unsolved puzzle by normalized answer
-  //   let firstUnsolvedIndex = 0;
-  //   for (let i = 0; i < allPuzzles[currentGroup].length; i++) {
-  //     const normalized = normalizeAnswer(allPuzzles[currentGroup][i].answer);
-  //     if (!solved[normalized]) {
-  //       firstUnsolvedIndex = i;
-  //       break;
-  //     }
-  //     if (i === allPuzzles[currentGroup].length - 1) {
-  //       firstUnsolvedIndex = 0; // All solved, start from beginning
-  //     }
-  //   }
-  
-  //   currentPuzzle = firstUnsolvedIndex;
-  
-  //   loadPuzzle();
-  //   renderGroupButtons(); // refresh unlocks
-  // }  
-    
   function generateShareableProgress() {
     let totalSolved = 0;
     let totalCount = 0;
@@ -788,13 +755,13 @@ function addHint() {
   let hintLevel = getHintLevel(allPuzzles[currentGroup][currentPuzzle].answer)
   if (hintLevel < 3) {
       setHintLevel(allPuzzles[currentGroup][currentPuzzle].answer, hintLevel+1);
-      updatePuzzleHTML();
+      updatePuzzleHTML(true);
     }
   }
   
 function resetHints() {
     setHintLevel(allPuzzles[currentGroup][currentPuzzle].answer, 0);
-    updatePuzzleHTML();
+    updatePuzzleHTML(true);
 }
 function updateHintTooltip() {
   const tooltip = document.getElementById("hintTooltip");
