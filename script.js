@@ -117,7 +117,7 @@ const allPuzzles = {
     { emoji: "(💎💰🎁)(🌊🏝️🌊)", answer: "Treasure Island", hint1: "(💎💰🎁) (🌊🏝️🌊)", hint2: "_ _ _ _ _ _ _ _   _ _ _ _ _ _", author: "Robert Louis Stevenson" },
     { emoji: "🤴🦟s", answer: "Lord of the Flies", hint1: "🤴 of the 🦟s", hint2: "_ _ _ _ of the _ _ _ _ _", author: "William Golding" },
     { emoji: "🪁🏃", answer: "The Kite Runner", hint1: "The 🪁 🏃", hint2: "The _ _ _ _   _ _ _ _ _ _", author: "Khaled Hosseini" },
-    { emoji: "5️⃣0️⃣🕶️(⬜↔️⬛)", answer: ["Fifty Shades of Gray", "50 Shades of Gray"], hint1: "5️⃣0️⃣ 🕶️ of (⬜↔️⬛)", hint2: "_ _ _ _ _   _ _ _ _ _ _ of _ _ _ _", author: "E. L. James" },
+    { emoji: "5️⃣0️⃣🕶️(⬜↔️⬛)", answer: ["Fifty Shades of Grey", "50 Shades of Grey"], hint1: "5️⃣0️⃣ 🕶️ of (⬜↔️⬛)", hint2: "_ _ _ _ _   _ _ _ _ _ _ of _ _ _ _", author: "E. L. James" },
     { emoji: "(👨👍🚘🧗‍♂️)📋🌌", answer: "The Hitchhiker's Guide to the Galaxy", hint1: "The (👨👍🚘🧗‍♂️)'s 📋 to the 🌌", hint2: "The _ _ _ _ _ _ _ _ _ _'s _ _ _ _ _ to the _ _ _ _ _ _", author: "Douglas Adams"  }
   ],
   "Group IV": [
